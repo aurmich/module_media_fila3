@@ -22,7 +22,11 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
 use Modules\Media\Actions\Video\ConvertVideoByConvertDataAction;
 use Modules\Media\Filament\Resources\MediaResource\Widgets\ConvertWidget;
 
+<<<<<<< HEAD
 class ViewMedia extends XotBaseViewRecord
+=======
+class ViewMedia extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord
+>>>>>>> 306ac98b (up)
 {
     protected static string $resource = MediaResource::class;
 
