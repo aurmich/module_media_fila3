@@ -59,15 +59,12 @@ class ListMedia extends XotBaseListRecords
                 ->options(fn () => Media::distinct()->pluck('collection_name', 'collection_name')->toArray()),
             'mime_type' => SelectFilter::make('mime_type')
                 ->options(fn () => Media::distinct()->pluck('mime_type', 'mime_type')->toArray()),
-<<<<<<< HEAD
             'type' => SelectFilter::make('mime_type')
                 ->options([
                     'image/jpeg' => 'JPEG',
                     'image/png' => 'PNG',
                     'application/pdf' => 'PDF',
                 ]),
-=======
->>>>>>> b5b5b268 (up)
         ];
     }
 
