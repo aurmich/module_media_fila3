@@ -9,11 +9,7 @@ use Filament\Resources\Pages\ViewRecord;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
 
-<<<<<<< HEAD
 class ConvertMedia extends XotBaseViewRecord
-=======
-class ConvertMedia extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord
->>>>>>> 306ac98b (up)
 {
     protected static string $resource = MediaResource::class;
 
