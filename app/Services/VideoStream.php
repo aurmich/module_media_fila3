@@ -31,7 +31,8 @@ class VideoStream
 
     private ?int $fileModifiedTime = null; // Last modified time of the video file
 
-    private mixed $stream; // File stream resource
+    /** @var resource|null */
+    private $stream = null; // File stream resource
 
     /**
      * Initialize the video stream.
