@@ -260,9 +260,17 @@ class Media extends SpatieMedia
         return $this->belongsTo(TemporaryUpload::class);
     }
 
+    /**
+     * Relazione con il creatore del media.
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo<\Illuminate\Database\Eloquent\Model, self>
+     * @phpstan-return \Illuminate\Database\Eloquent\Relations\BelongsTo<\Illuminate\Database\Eloquent\Model, $this>
+     */
     public function creator(): BelongsTo
     {
-        return $this->belongsTo(\Modules\Xot\Datas\XotData::make()->getUserClass(), 'created_by');
+        /** @var class-string<\Illuminate\Database\Eloquent\Model> $userClass */
+        $userClass = \Modules\Xot\Datas\XotData::make()->getUserClass();
+        return $this->belongsTo($userClass, 'created_by');
     }
 
     public function mediaConverts(): HasMany
