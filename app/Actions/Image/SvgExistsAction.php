@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions\Image;
 
-use BladeUI\Icons\Factory as IconFactory;
 use Illuminate\Support\Arr;
 use Modules\UI\Actions\Icon\GetAllIconsAction;
 
@@ -15,16 +14,6 @@ use Modules\UI\Actions\Icon\GetAllIconsAction;
  */
 class SvgExistsAction
 {
-    private IconFactory $factory;
-
-    /**
-     * Constructor.
-     */
-    public function __construct(IconFactory $factory)
-    {
-        $this->factory = $factory;
-    }
-
     /**
      * Verifica se l'SVG esiste nei set di icone registrati.
      *
@@ -49,6 +38,5 @@ class SvgExistsAction
         }
 
         return false;
-
     }
 }
