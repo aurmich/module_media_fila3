@@ -55,3 +55,9 @@ Homestead.json
 docs/phpstan/
 docs/cache/
 cache/
+
+# Standard ignores (auto)
+*.old
+*.old1
+*.bakcup
+*.backup.*
