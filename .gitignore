@@ -49,9 +49,18 @@ Homestead.json
 *.exe
 *:Zone.Identifier
 .DS_Store
+<<<<<<< HEAD
 *.old
 *.old1
 *.backup
+=======
+
+# Backup files
+*.old
+*.old1
+*.backup
+*.backup.*
+>>>>>>> 3ff1ffe (.)
 *.bak
 
 # Documentation and cache
