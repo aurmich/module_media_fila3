@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Modules\Media\Tests;
+use Modules\Media\Tests\TestCase;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,12 +15,8 @@ namespace Modules\Media\Tests;
 |
 */
 
-<<<<<<< HEAD
-uses(TestCase::class)
-    ->uses(\Illuminate\Foundation\Testing\DatabaseTransactions::class)
-=======
 pest()->extend(TestCase::class)
->>>>>>> 195c6c4 (.)
+    ->use(Illuminate\Foundation\Testing\RefreshDatabase::class)
     ->in('Feature', 'Unit');
 
 /*
