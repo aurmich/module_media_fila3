@@ -15,12 +15,7 @@ namespace Modules\Media\Tests;
 |
 */
 
-<<<<<<< HEAD
-uses(TestCase::class)
-    ->uses(\Illuminate\Foundation\Testing\DatabaseTransactions::class)
-=======
 pest()->extend(TestCase::class)
->>>>>>> 195c6c4 (.)
     ->in('Feature', 'Unit');
 
 /*
