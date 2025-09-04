@@ -1,3 +1,7 @@
+# __stream
+
+<!-- Contenuto migrato da _docs/__stream.txt -->
+
 https://laravel-news.com/temporary-directory
 
 
