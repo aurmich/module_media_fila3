@@ -50,9 +50,9 @@ Ho analizzato e corretto completamente il file `S3Test.php` nel modulo Media, ri
 - `laravel/Modules/Media/lang/de/s3test.php` - Traduzioni tedesche complete
 
 ### 📚 **Documentazione Aggiornata**
-- `laravel/Modules/Media/docs/README.md` - Aggiunta sezione correzioni
-- `laravel/Modules/Media/docs/s3test_corrections.md` - Documentazione dettagliata correzioni
-- `laravel/Modules/Media/docs/prevention_guidelines.md` - Linee guida prevenzione
+- `laravel/Modules/Media/project_docs/README.md` - Aggiunta sezione correzioni
+- `laravel/Modules/Media/project_docs/s3test_corrections.md` - Documentazione dettagliata correzioni
+- `laravel/Modules/Media/project_docs/prevention_guidelines.md` - Linee guida prevenzione
 
 ## ✅ **Conformità Raggiunta**
 
