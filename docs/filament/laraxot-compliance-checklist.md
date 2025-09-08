@@ -197,8 +197,8 @@ class ExamplePage extends XotBasePage
 
 - [S3Test Refactoring Analysis](s3test-refactoring-analysis.md)
 - [Media Module README](../README.md)
-- [Laraxot Best Practices](../../../../project_docs/laraxot-best-practices.md)
-- [PHPStan Guidelines](../../../../project_docs/phpstan-guidelines.md)
+- [Laraxot Best Practices](../../../../docs/laraxot-best-practices.md)
+- [PHPStan Guidelines](../../../../docs/phpstan-guidelines.md)
 
 ---
 

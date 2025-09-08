@@ -195,14 +195,14 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 - [Performance Optimization](./performance_optimization.md)
 
 ### Moduli Collegati
-- [SaluteOra Module](../../SaluteOra/project_docs/modelli_factory_seeder_analisi.md) - Documenti medici
-- [User Module](../../User/project_docs/modelli_factory_seeder_analisi.md) - Avatar e documenti utente
-- [Cms Module](../../Cms/project_docs/modelli_factory_seeder_analisi.md) - Contenuti multimediali
-- [Notify Module](../../Notify/project_docs/modelli_factory_seeder_analisi.md) - Allegati notifiche
+- [SaluteOra Module](../../SaluteOra/docs/modelli_factory_seeder_analisi.md) - Documenti medici
+- [User Module](../../User/docs/modelli_factory_seeder_analisi.md) - Avatar e documenti utente
+- [Cms Module](../../Cms/docs/modelli_factory_seeder_analisi.md) - Contenuti multimediali
+- [Notify Module](../../Notify/docs/modelli_factory_seeder_analisi.md) - Allegati notifiche
 
 ### Librerie e Servizi
 - [Intervention Image](http://image.intervention.io/) - Image processing
-- [Spatie Media Library](https://spatie.be/project_docs/laravel-medialibrary) - Media management
+- [Spatie Media Library](https://spatie.be/docs/laravel-medialibrary) - Media management
 - [FFmpeg](https://ffmpeg.org/) - Video/Audio processing
 - [ImageMagick](https://imagemagick.org/) - Advanced image processing
 

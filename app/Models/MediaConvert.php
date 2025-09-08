@@ -36,7 +36,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property string|null $disk
  * @property string|null $file
  * @property Media|null $media
- *
  * @method static \Modules\Media\Database\Factories\MediaConvertFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert newQuery()
@@ -62,18 +61,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert whereWidth($value)
- *
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
- *
- * @method static MediaConvert|null first()
- * @method static \Illuminate\Database\Eloquent\Collection<int, MediaConvert> get()
- * @method static MediaConvert create(array $attributes = [])
- * @method static MediaConvert firstOrCreate(array $attributes = [], array $values = [])
- * @method static \Illuminate\Database\Eloquent\Builder<static>|MediaConvert where(string|\Closure $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
- * @method static \Illuminate\Database\Eloquent\Builder<static>|MediaConvert whereNotNull(string|\Illuminate\Contracts\Database\Query\Expression $columns)
- * @method static int count(string $columns = '*')
- *
  * @mixin IdeHelperMediaConvert
  * @mixin \Eloquent
  */
@@ -104,25 +93,23 @@ class MediaConvert extends BaseModel
 
     public function getDiskAttribute(?string $value): ?string
     {
-        if ($this->media == null) {
+        if($this->media==null){
             return null;
         }
-
         return $this->media->disk;
     }
 
     public function getFileAttribute(?string $value): ?string
     {
-        if ($this->media == null) {
+        if($this->media==null){
             return null;
         }
-
-        return $this->media->path.'/'.$this->media->file_name;
+        return $this->media->path . '/' . $this->media->file_name;
     }
 
     public function getConvertedFileAttribute(?string $value): ?string
     {
-        if ($this->media == null) {
+        if($this->media==null){
             return null;
         }
         $info = pathinfo($this->media->file_name);
@@ -131,6 +118,6 @@ class MediaConvert extends BaseModel
         // "extension" => "mp4"
         // "filename" => "20600550-uhd_3840_2160_30fps"
 
-        return $this->media->path.'/conversions/'.$info['filename'].'_'.$this->id.'.'.$this->format;
+        return $this->media->path . '/conversions/' . $info['filename'] . '_' . $this->id . '.' . $this->format;
     }
 }

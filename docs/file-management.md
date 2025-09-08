@@ -35,7 +35,7 @@ FileUpload::make('certifications')
     ->maxSize(5120) // 5MB
 ```
 
-Per una documentazione dettagliata sull'utilizzo di `FileUpload`, consulta la [Gestione dei File Upload in Filament](/project_docs/filament-file-uploads.md).
+Per una documentazione dettagliata sull'utilizzo di `FileUpload`, consulta la [Gestione dei File Upload in Filament](/docs/filament-file-uploads.md).
 
 ### Utilizzo di Livewire
 
@@ -77,7 +77,7 @@ Schema::table('users', function (Blueprint $table) {
 });
 ```
 
-Per una documentazione dettagliata sulla mappatura dei campi, consulta la [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/project_docs/DATABASE_FIELD_MAPPING.md).
+Per una documentazione dettagliata sulla mappatura dei campi, consulta la [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/docs/DATABASE_FIELD_MAPPING.md).
 
 ## Accesso ai File
 
@@ -152,8 +152,8 @@ protected static function booted()
 
 ## Documentazione Correlata
 
-- [Gestione dei File Upload in Filament](/project_docs/filament-file-uploads.md)
-- [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/project_docs/DATABASE_FIELD_MAPPING.md)
-- [Migrazioni del Database](/project_docs/database-migrations.md)
-- [Gestione degli Utenti](/project_docs/user-management.md)
-- [Pattern di Ereditarietà dei Modelli](/project_docs/model-inheritance-patterns.md)
+- [Gestione dei File Upload in Filament](/docs/filament-file-uploads.md)
+- [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/docs/DATABASE_FIELD_MAPPING.md)
+- [Migrazioni del Database](/docs/database-migrations.md)
+- [Gestione degli Utenti](/docs/user-management.md)
+- [Pattern di Ereditarietà dei Modelli](/docs/model-inheritance-patterns.md)

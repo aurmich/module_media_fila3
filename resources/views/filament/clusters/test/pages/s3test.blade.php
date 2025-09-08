@@ -13,11 +13,11 @@
 <x-filament::page>
     <x-filament::section>
         <x-slot name="heading">
-            {{ (string) __('ui::pages.s3test.heading') }}
+            {{ __('ui::pages.s3test.heading') }}
         </x-slot>
 
         <x-slot name="description">
-            {{ (string) __('ui::pages.s3test.description') }}
+            {{ __('ui::pages.s3test.description') }}
         </x-slot>
 
         {{-- Form per invio email --}}

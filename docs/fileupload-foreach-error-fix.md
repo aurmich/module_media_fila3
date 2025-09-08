@@ -196,10 +196,10 @@ public function getFormFill(): array
 
 ## Riferimenti
 
-- [Filament FileUpload Documentation](https://filamentphp.com/project_docs/3.x/forms/fields/file-upload)
-- [Laravel File Upload Best Practices](https://laravel.com/project_docs/10.x/filesystem)
-- [Modules/Xot/project_docs/fileupload-components.md](../laravel/Modules/Xot/project_docs/fileupload-components.md)
-- [Modules/User/project_docs/registration-widget.md](../laravel/Modules/User/project_docs/registration-widget.md)
+- [Filament FileUpload Documentation](https://filamentphp.com/docs/3.x/forms/fields/file-upload)
+- [Laravel File Upload Best Practices](https://laravel.com/docs/10.x/filesystem)
+- [Modules/Xot/docs/fileupload-components.md](../laravel/Modules/Xot/docs/fileupload-components.md)
+- [Modules/User/docs/registration-widget.md](../laravel/Modules/User/docs/registration-widget.md)
 
 *Ultimo aggiornamento: 2025-01-03*
 *Autore: AI Assistant*
