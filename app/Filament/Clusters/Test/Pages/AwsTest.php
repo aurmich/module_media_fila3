@@ -18,9 +18,11 @@ class AwsTest extends XotBasePage
     protected static ?string $cluster = Test::class;
 
     public array $testResults = [];
+
     public string $activeTab = 's3';
 
     private const DEFAULT_REGION = 'eu-west-1';
+
     private const KEY_PREVIEW_LENGTH = 8;
 
     public array $connectionTests = [
@@ -59,16 +61,16 @@ class AwsTest extends XotBasePage
                 ->schema([
                     Components\Actions::make([
                         Components\Actions\Action::make('test_s3_connection')
-                            ->label(__('ui::aws_test.test_s3_connection'))
+                            ->label((string) __('ui::aws_test.test_s3_connection'))
                             ->action('testS3Connection'),
 
                         Components\Actions\Action::make('test_s3_permissions')
-                            ->label(__('ui::aws_test.test_s3_permissions'))
+                            ->label((string) __('ui::aws_test.test_s3_permissions'))
                             ->color('warning')
                             ->action('testS3Permissions'),
 
                         Components\Actions\Action::make('test_file_operations')
-                            ->label(__('ui::aws_test.test_file_operations'))
+                            ->label((string) __('ui::aws_test.test_file_operations'))
                             ->color('success')
                             ->action('testS3FileOperations'),
                     ])->fullWidth(),
@@ -151,7 +153,7 @@ class AwsTest extends XotBasePage
     }
 
     /* Test Methods */
-    public function testS3Connection(): void
+    public function test_s3_connection(): void
     {
         try {
             $s3 = new S3Client([
@@ -177,7 +179,7 @@ class AwsTest extends XotBasePage
             ];
 
             Notification::make()
-                ->title(__('ui::awstest.notifications.s3_connection_successful'))
+                ->title((string) __('ui::awstest.notifications.s3_connection_successful'))
                 ->success()
                 ->send();
         } catch (AwsException $e) {
@@ -191,14 +193,14 @@ class AwsTest extends XotBasePage
             ];
 
             Notification::make()
-                ->title(__('ui::awstest.notifications.s3_connection_failed'))
+                ->title((string) __('ui::awstest.notifications.s3_connection_failed'))
                 ->danger()
                 ->body($e->getAwsErrorCode() ?? 'UnknownError')
                 ->send();
         }
     }
 
-    public function testCloudFrontConfig(): void
+    public function test_cloud_front_config(): void
     {
         try {
             // Implement CloudFront config test
@@ -212,7 +214,7 @@ class AwsTest extends XotBasePage
             ];
 
             Notification::make()
-                ->title(__('ui::awstest.notifications.cloudfront_config_valid'))
+                ->title((string) __('ui::awstest.notifications.cloudfront_config_valid'))
                 ->success()
                 ->send();
         } catch (\Exception $e) {
@@ -226,7 +228,7 @@ class AwsTest extends XotBasePage
             ];
 
             Notification::make()
-                ->title(__('ui::awstest.notifications.cloudfront_config_error'))
+                ->title((string) __('ui::awstest.notifications.cloudfront_config_error'))
                 ->danger()
                 ->send();
         }
@@ -249,7 +251,7 @@ class AwsTest extends XotBasePage
         ];
 
         Notification::make()
-            ->title(__('ui::awstest.notifications.full_diagnostic_completed'))
+            ->title((string) __('ui::awstest.notifications.full_diagnostic_completed'))
             ->success()
             ->send();
     }
@@ -268,7 +270,7 @@ class AwsTest extends XotBasePage
 
     protected function getS3Solution(?string $errorCode): string
     {
-        if (null === $errorCode) {
+        if ($errorCode === null) {
             return 'Unknown error - check AWS credentials and configuration';
         }
 
@@ -282,7 +284,7 @@ class AwsTest extends XotBasePage
         return $solutions[$errorCode] ?? 'Consult AWS documentation for error: '.$errorCode;
     }
 
-    public function testS3Permissions(): void
+    public function test_s3_permissions(): void
     {
         try {
             $s3 = new S3Client([
@@ -331,7 +333,7 @@ class AwsTest extends XotBasePage
         }
     }
 
-    public function testS3FileOperations(): void
+    public function test_s3_file_operations(): void
     {
         try {
             $s3 = new S3Client([
@@ -399,7 +401,7 @@ class AwsTest extends XotBasePage
         }
     }
 
-    public function testCloudFrontSignedUrls(): void
+    public function test_cloud_front_signed_urls(): void
     {
         try {
             // Test CloudFront signed URL generation
@@ -442,7 +444,7 @@ class AwsTest extends XotBasePage
         }
     }
 
-    public function testIamCredentials(): void
+    public function test_iam_credentials(): void
     {
         try {
             $sts = new StsClient([
@@ -488,7 +490,7 @@ class AwsTest extends XotBasePage
         }
     }
 
-    public function testIamPolicies(): void
+    public function test_iam_policies(): void
     {
         try {
             // Test IAM policies by attempting various operations
