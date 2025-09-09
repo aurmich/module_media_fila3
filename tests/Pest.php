@@ -2,7 +2,11 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\Media\Tests;
+=======
+use Modules\Media\Tests\TestCase;
+>>>>>>> f1053a51 (.)
 
 /*
 |--------------------------------------------------------------------------

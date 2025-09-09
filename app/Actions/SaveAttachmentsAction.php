@@ -64,7 +64,19 @@ class SaveAttachmentsAction
             try {
                 $media = $record->addMedia($tempPath)
                     ->usingFileName(basename($path))
+<<<<<<< HEAD
                     ->toMediaCollection($attachment,$disk);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    ->toMediaCollection($attachment,$disk);
+=======
+                    ->toMediaCollection($attachment);
+>>>>>>> 9c5e628 (.)
+=======
+                    ->toMediaCollection($attachment,$disk);
+>>>>>>> da8eaf7 (.)
+>>>>>>> f1053a51 (.)
                 
                 $dataAttachments[$attachment] = $media->getPathRelativeToRoot();
             } finally {

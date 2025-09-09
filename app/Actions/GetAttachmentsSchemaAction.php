@@ -13,7 +13,14 @@ use Illuminate\Support\Str;
 use Webmozart\Assert\Assert;
 use Illuminate\Support\HtmlString;
 use Illuminate\Contracts\View\View;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Config;
+=======
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Facades\Config;
+>>>>>>> da8eaf7 (.)
+>>>>>>> f1053a51 (.)
 use Illuminate\Support\Facades\Storage;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\FileUpload;
@@ -38,12 +45,22 @@ class GetAttachmentsSchemaAction
     {
         $schema = [];
         $sessionId = session()->getId();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        $sessionDir = "session-uploads/{$sessionId}";
+=======
+>>>>>>> f1053a51 (.)
         $prefix=Config::string('media-library.prefix');
         
         $sessionDir = "session-uploads/{$sessionId}";
         if($prefix!=''){
             $sessionDir =$prefix.'/'.$sessionDir;
         }
+<<<<<<< HEAD
+=======
+>>>>>>> da8eaf7 (.)
+>>>>>>> f1053a51 (.)
         foreach ($attachments as $attachment) {
             $schema[$attachment]=FileUpload::make($attachment)
             //$schema[$attachment]=SpatieMediaLibraryFileUpload::make($attachment)
@@ -53,7 +70,18 @@ class GetAttachmentsSchemaAction
             ->maxSize(5120*2)
             ->preserveFilenames()
             ->required()
+<<<<<<< HEAD
             ->previewable(false)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            ->previewable(false)
+=======
+>>>>>>> 9c5e628 (.)
+=======
+            ->previewable(false)
+>>>>>>> da8eaf7 (.)
+>>>>>>> f1053a51 (.)
             //->saveUploadedFiles()
             ->afterStateUpdated(function ($state, Set $set) use ($attachment,$sessionDir,$disk) {
                 if (!$state) return;

@@ -1,5 +1,12 @@
 <?php
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> da8eaf7 (.)
+>>>>>>> f1053a51 (.)
 return array (
   'navigation' => 
   array (
@@ -83,3 +90,27 @@ return array (
     ),
   ),
 );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+return [
+    'navigation' => [
+        'label' => 'media convert',
+        'group' => 'media convert',
+        'icon' => 'media convert',
+        'sort' => '20',
+    ],
+    'fields' => [
+        'applyFilters' => [
+            'label' => 'applyFilters',
+        ],
+        'toggleColumns' => [
+            'label' => 'toggleColumns',
+        ],
+    ],
+];
+>>>>>>> 9c5e628 (.)
+=======
+>>>>>>> da8eaf7 (.)
+>>>>>>> f1053a51 (.)
