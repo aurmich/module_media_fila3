@@ -56,13 +56,8 @@ L'analisi PHPStan di livello 1 non ha rilevato errori nel modulo Media. Questo Ã
 
    - Monitorare l'utilizzo dello storage 
 ## Collegamenti tra versioni di phpstan_report.md
-<<<<<<< HEAD
-* [phpstan_report.md](../../../Lang/project_docs/phpstan_report.md)
-* [phpstan_report.md](../../../Media/project_docs/phpstan_report.md)
-=======
 * [phpstan_report.md](../../../Lang/docs/phpstan_report.md)
 * [phpstan_report.md](../../../Media/docs/phpstan_report.md)
->>>>>>> f1053a51 (.)
 
 
 ### Versione Incoming

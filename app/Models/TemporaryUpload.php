@@ -5,23 +5,7 @@ declare(strict_types=1);
 namespace Modules\Media\Models;
 
 use Illuminate\Database\Eloquent\Builder;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-=======
->>>>>>> 9c5e628 (.)
-=======
-use Illuminate\Database\Eloquent\Factories\HasFactory;
->>>>>>> da8eaf7 (.)
->>>>>>> f1053a51 (.)
-=======
-=======
-use Illuminate\Database\Eloquent\Factories\HasFactory;
->>>>>>> f47166cc (.)
 use Illuminate\Database\Eloquent\MassPrunable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\UploadedFile;
@@ -58,41 +42,12 @@ use Webmozart\Assert\Assert;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TemporaryUpload whereDeletedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TemporaryUpload whereDeletedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TemporaryUpload whereUpdatedBy($value)
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @mixin IdeHelperTemporaryUpload
  * @method static \Modules\Media\Database\Factories\TemporaryUploadFactory factory($count = null, $state = [])
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
- * @mixin IdeHelperTemporaryUpload
- * @method static \Modules\Media\Database\Factories\TemporaryUploadFactory factory($count = null, $state = [])
-=======
->>>>>>> 9c5e628 (.)
-=======
- * @mixin IdeHelperTemporaryUpload
- * @method static \Modules\Media\Database\Factories\TemporaryUploadFactory factory($count = null, $state = [])
->>>>>>> da8eaf7 (.)
->>>>>>> f1053a51 (.)
-=======
-=======
- * @mixin IdeHelperTemporaryUpload
- * @method static \Modules\Media\Database\Factories\TemporaryUploadFactory factory($count = null, $state = [])
->>>>>>> f47166cc (.)
  * @mixin \Eloquent
  */
 class TemporaryUpload extends Model implements HasMedia
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> da8eaf7 (.)
->>>>>>> f1053a51 (.)
-=======
->>>>>>> f47166cc (.)
     use HasFactory;
     use InteractsWithMedia;
     use MassPrunable;
@@ -107,22 +62,6 @@ class TemporaryUpload extends Model implements HasMedia
         return \Modules\Media\Database\Factories\TemporaryUploadFactory::new();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f47166cc (.)
-    use InteractsWithMedia;
-    use MassPrunable;
-
-=======
-<<<<<<< HEAD
->>>>>>> da8eaf7 (.)
->>>>>>> f1053a51 (.)
-=======
->>>>>>> f47166cc (.)
     public static ?\Closure $manipulatePreview = null;
 
     public static ?string $disk = null;
@@ -131,24 +70,7 @@ class TemporaryUpload extends Model implements HasMedia
     protected $connection = 'media';
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @var array<string>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @var array<string>
-=======
-=======
->>>>>>> f47166cc (.)
-     * @var array<string>|bool
-=======
-     * @var array<string>
-<<<<<<< HEAD
->>>>>>> da8eaf7 (.)
->>>>>>> f1053a51 (.)
-=======
->>>>>>> f47166cc (.)
      */
     protected $guarded = [];
 

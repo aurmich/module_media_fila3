@@ -4,30 +4,21 @@ declare(strict_types=1);
 
 namespace Modules\Media\Models\Policies;
 
-<<<<<<< HEAD
-use Modules\Xot\Models\Policies\XotBasePolicy;
-
-abstract class MediaBasePolicy extends XotBasePolicy {}
-=======
 use Illuminate\Auth\Access\HandlesAuthorization;
-use Modules\Xot\Contracts\ProfileContract;
+use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 
 abstract class MediaBasePolicy
 {
     use HandlesAuthorization;
 
-    public function before(ProfileContract $user, string $ability): ?bool
+    public function before(UserContract $user, string $ability): ?bool
     {
         $xotData = XotData::make();
-        if ($user->hasRole('super-admin')/** @phpstan-ignore method.nonObject */) {
+        if ($user->hasRole('super-admin')) {
             return true;
         }
 
         return null;
     }
 }
-<<<<<<< HEAD
->>>>>>> f1053a51 (.)
-=======
->>>>>>> f47166cc (.)

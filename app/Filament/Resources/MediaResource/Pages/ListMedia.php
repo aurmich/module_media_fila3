@@ -68,33 +68,20 @@ class ListMedia extends XotBaseListRecords
     public function getTableActions(): array
     {
         return [
-<<<<<<< HEAD
-            'view' => ViewAction::make(),
-            'view_attachment' => Action::make('view_attachment')
-
-=======
             'view' => ViewAction::make()
                 ,
             'view_attachment' => Action::make('view_attachment')
                 
->>>>>>> f1053a51 (.)
                 ->icon('heroicon-s-eye')
                 ->color('gray')
                 ->url(
                     static fn (Media $record): string => $record->getUrl()
                 )->openUrlInNewTab(true),
             'delete' => DeleteAction::make()
-<<<<<<< HEAD
-
-                ->requiresConfirmation(),
-            'download' => Action::make('download_attachment')
-
-=======
                 
                 ->requiresConfirmation(),
             'download' => Action::make('download_attachment')
                 
->>>>>>> f1053a51 (.)
                 ->icon('heroicon-o-arrow-down-tray')
                 ->color('primary')
                 ->action(
@@ -106,10 +93,6 @@ class ListMedia extends XotBaseListRecords
                 ->url(
                     function ($record): string {
                         Assert::string($res = static::$resource::getUrl('convert', ['record' => $record]));
-<<<<<<< HEAD
-
-=======
->>>>>>> f1053a51 (.)
                         return $res;
                     }
                 )->openUrlInNewTab(true),

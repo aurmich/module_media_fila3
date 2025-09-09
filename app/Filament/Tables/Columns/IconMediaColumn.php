@@ -16,23 +16,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\SelectColumn;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
-=======
->>>>>>> 9c5e628 (.)
-=======
-use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
->>>>>>> da8eaf7 (.)
->>>>>>> f1053a51 (.)
-=======
-=======
-use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
->>>>>>> f47166cc (.)
 
 class IconMediaColumn extends IconColumn
 {
@@ -47,16 +31,6 @@ class IconMediaColumn extends IconColumn
                 ->icon('heroicon-o-document-text')
                 ->color(fn ($record) => $record->getFirstMedia($attachment) ? 'success' : 'danger')
                 ->tooltip(fn ($record) => $record->getFirstMedia($attachment)->file_name ?? 'Documento non caricato')
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> da8eaf7 (.)
->>>>>>> f1053a51 (.)
-=======
->>>>>>> f47166cc (.)
                /*
                  ->url(function($record) use ($attachment){
                     $media = $record->getFirstMedia($attachment);
@@ -73,44 +47,12 @@ class IconMediaColumn extends IconColumn
                 
                 ->action(function ($record,\Illuminate\Http\Request $request) use ($attachment) {
                     
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f47166cc (.)
-
-                ->action(function ($record,\Illuminate\Http\Request $request) use ($attachment) {
-=======
-<<<<<<< HEAD
->>>>>>> da8eaf7 (.)
->>>>>>> f1053a51 (.)
-=======
->>>>>>> f47166cc (.)
                     // @phpstan-ignore method.nonObject
                     $media = $record->getFirstMedia($attachment);
                     if (!$media) {
                         return;
                     }
-<<<<<<< HEAD
-<<<<<<< HEAD
                     //dddx($media->getPath());
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    //dddx($media->getPath());
-=======
-=======
->>>>>>> f47166cc (.)
-
-=======
-                    //dddx($media->getPath());
-<<<<<<< HEAD
->>>>>>> da8eaf7 (.)
->>>>>>> f1053a51 (.)
-=======
->>>>>>> f47166cc (.)
                     return $media->toInlineResponse($request);
                     //return $media->toResponse($request);
 
@@ -121,16 +63,6 @@ class IconMediaColumn extends IconColumn
                     //return response()->streamDownload(function () use ($media) {
                     //    echo $media->get();
                     //}, $media->file_name);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> da8eaf7 (.)
->>>>>>> f1053a51 (.)
-=======
->>>>>>> f47166cc (.)
                     
                     //$headers=[
                     //    'Content-Type' => $media->mime_type,
@@ -144,31 +76,6 @@ class IconMediaColumn extends IconColumn
                     //
                 })
                   
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f47166cc (.)
-                    /*
-                    $headers=[
-                        'Content-Type' => $media->mime_type,
-                        'Content-Disposition' => 'inline; filename="' . basename($media->getPathRelativeToRoot()) . '"'
-                    ];
-                    $path = Storage::disk($media->disk)->path($media->getPathRelativeToRoot());
-                    return response()->file($path, $headers);
-                    */
-                    /*
-                    return Storage::disk($media->disk)->response($media->getPathRelativeToRoot(), null, $headers);
-                    */
-                })
-=======
-<<<<<<< HEAD
->>>>>>> da8eaf7 (.)
->>>>>>> f1053a51 (.)
-=======
->>>>>>> f47166cc (.)
                 ;
 
 

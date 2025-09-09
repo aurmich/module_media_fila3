@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\MediaConvertResource\Pages;
 
-<<<<<<< HEAD
-=======
 use Filament\Resources\Pages\CreateRecord;
->>>>>>> f1053a51 (.)
 use Modules\Media\Filament\Resources\MediaConvertResource;
 
 class CreateMediaConvert extends \Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord
