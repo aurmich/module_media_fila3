@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -44,6 +45,8 @@ return array (
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f47166cc (.)
 return [
     'fields' => [
         'change-state' => [
@@ -67,9 +70,15 @@ return [
             'description' => 'Testo del messaggio',
             'helper_text' => '',
         ],
+        'open_link' => [
+            'label' => 'open_link',
+        ],
     ],
 ];
+<<<<<<< HEAD
 >>>>>>> 9c5e628 (.)
 =======
 >>>>>>> da8eaf7 (.)
 >>>>>>> f1053a51 (.)
+=======
+>>>>>>> f47166cc (.)

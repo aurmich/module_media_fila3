@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> da8eaf7 (.)
 >>>>>>> f1053a51 (.)
+=======
+>>>>>>> f47166cc (.)
 # Dependencies and packages
 /vendor/
 /node_modules/
@@ -66,9 +69,12 @@ docs/phpstan/
 docs/cache/
 cache/
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f47166cc (.)
 vendor
 /vendor/
 node_modules/
@@ -173,10 +179,14 @@ cache/
 *.bak
 # File di log
 *.log
--e 
+
 # PHPStan documentation
 docs/phpstan/
+<<<<<<< HEAD
 >>>>>>> 9c5e628 (.)
 =======
 >>>>>>> da8eaf7 (.)
 >>>>>>> f1053a51 (.)
+=======
+
+>>>>>>> f47166cc (.)

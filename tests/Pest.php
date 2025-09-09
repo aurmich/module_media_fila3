@@ -3,10 +3,14 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 namespace Modules\Media\Tests;
 =======
 use Modules\Media\Tests\TestCase;
 >>>>>>> f1053a51 (.)
+=======
+namespace Modules\Media\Tests;
+>>>>>>> f47166cc (.)
 
 /*
 |--------------------------------------------------------------------------

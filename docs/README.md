@@ -41,7 +41,6 @@ $result = app(MediaService::class)->process($data);
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> da8eaf7 (.)
 # 📁 **Media Module** - Sistema Avanzato Gestione File Multimediali
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
@@ -201,9 +200,7 @@ class User extends Model
 }
 
 // ✅ FARE QUESTO
->>>>>>> 9c5e628 (.)
 =======
->>>>>>> da8eaf7 (.)
 use Modules\Media\Traits\HasMedia;
 
 class User extends XotBaseModel
@@ -212,7 +209,6 @@ class User extends XotBaseModel
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> da8eaf7 (.)
     
     protected $fillable = ['name', 'email'];
 }
@@ -904,8 +900,6 @@ docs/
 - [x] Nessun file .sh fuori da bashscripts/
 - [x] Documentazione aggiornata
 - [x] Struttura coerente in tutti i moduli
->>>>>>> 9c5e628 (.)
 =======
->>>>>>> da8eaf7 (.)
 
 >>>>>>> f1053a51 (.)
