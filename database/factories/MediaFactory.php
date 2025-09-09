@@ -6,6 +6,7 @@ namespace Modules\Media\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\Media\Models\Media;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
 
 /**
  * Media Factory
@@ -67,7 +68,7 @@ class MediaFactory extends Factory
      */
     public function image(): static
     {
-        $extension = (string) $this->faker->randomElement(['jpg', 'png', 'gif']);
+        $extension = SafeStringCastAction::cast($this->faker->randomElement(['jpg', 'png', 'gif']));
         $fileName = (string) $this->faker->word();
         
         return $this->state(fn (array $attributes): array => [
@@ -87,7 +88,7 @@ class MediaFactory extends Factory
      */
     public function document(): static
     {
-        $extension = (string) $this->faker->randomElement(['pdf', 'doc', 'docx']);
+        $extension = SafeStringCastAction::cast($this->faker->randomElement(['pdf', 'doc', 'docx']));
         $fileName = (string) $this->faker->word();
         
         return $this->state(fn (array $attributes): array => [
