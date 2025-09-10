@@ -1,12 +1,12 @@
-# Gestione dei File in SaluteOra
+# Gestione dei File in 
 
 ## Panoramica
 
-Questo documento descrive le best practice per la gestione dei file in SaluteOra, inclusi il caricamento, l'archiviazione e l'accesso ai file in diverse parti dell'applicazione.
+Questo documento descrive le best practice per la gestione dei file in , inclusi il caricamento, l'archiviazione e l'accesso ai file in diverse parti dell'applicazione.
 
 ## Struttura delle Directory
 
-SaluteOra utilizza una struttura organizzata per l'archiviazione dei file:
+ utilizza una struttura organizzata per l'archiviazione dei file:
 
 ```
 /storage
@@ -23,7 +23,7 @@ SaluteOra utilizza una struttura organizzata per l'archiviazione dei file:
 
 ### Utilizzo di Filament
 
-Per i form amministrativi, SaluteOra utilizza il componente `FileUpload` di Filament:
+Per i form amministrativi,  utilizza il componente `FileUpload` di Filament:
 
 ```php
 use Filament\Forms\Components\FileUpload;
@@ -39,7 +39,7 @@ Per una documentazione dettagliata sull'utilizzo di `FileUpload`, consulta la [G
 
 ### Utilizzo di Livewire
 
-Per i form frontend, SaluteOra utilizza Livewire:
+Per i form frontend,  utilizza Livewire:
 
 ```php
 public function save()
@@ -91,7 +91,7 @@ $url = Storage::url($path);
 
 ### Controllo degli Accessi
 
-SaluteOra implementa un sistema di controllo degli accessi per i file sensibili:
+ implementa un sistema di controllo degli accessi per i file sensibili:
 
 ```php
 // In un controller
