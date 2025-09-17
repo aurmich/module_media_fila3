@@ -25,6 +25,10 @@ class ListMediaConverts extends XotBaseListRecords
     /**
      * @return array<string, Tables\Columns\Column>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 9a334cb (.)
     public function getTableColumns(): array
     {
         return [
@@ -63,21 +67,37 @@ class ListMediaConverts extends XotBaseListRecords
     /**
      * @return array<string, Tables\Filters\BaseFilter>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 9a334cb (.)
     public function getTableFilters(): array
     {
         return [
             'format' => SelectFilter::make('format')
+<<<<<<< HEAD
                 ->options(fn () => MediaConvert::distinct()->pluck('format', 'format')->toArray()),
             'codec_video' => SelectFilter::make('codec_video')
                 ->options(fn () => MediaConvert::distinct()->pluck('codec_video', 'codec_video')->toArray()),
             'codec_audio' => SelectFilter::make('codec_audio')
                 ->options(fn () => MediaConvert::distinct()->pluck('codec_audio', 'codec_audio')->toArray()),
+=======
+                ->options(MediaConvert::distinct()->pluck('format', 'format')->toArray(...)),
+            'codec_video' => SelectFilter::make('codec_video')
+                ->options(MediaConvert::distinct()->pluck('codec_video', 'codec_video')->toArray(...)),
+            'codec_audio' => SelectFilter::make('codec_audio')
+                ->options(MediaConvert::distinct()->pluck('codec_audio', 'codec_audio')->toArray(...)),
+>>>>>>> 9a334cb (.)
         ];
     }
 
     /**
      * @return array<string, Tables\Actions\Action|Tables\Actions\ActionGroup>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 9a334cb (.)
     public function getTableActions(): array
     {
         return [
@@ -100,6 +120,10 @@ class ListMediaConverts extends XotBaseListRecords
     /**
      * @return array<string, Tables\Actions\BulkAction>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 9a334cb (.)
     public function getTableBulkActions(): array
     {
         return [

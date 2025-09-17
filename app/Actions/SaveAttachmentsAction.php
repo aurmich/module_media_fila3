@@ -30,9 +30,13 @@ use function Safe\file_put_contents;
 use function Safe\unlink;
 
 
+<<<<<<< HEAD
 /**
  *
  */
+=======
+
+>>>>>>> 9a334cb (.)
 class SaveAttachmentsAction
 {
 
@@ -80,9 +84,13 @@ class SaveAttachmentsAction
             $record->update($dataAttachments);
         }
     }
+<<<<<<< HEAD
     /**
      *
      */
+=======
+    
+>>>>>>> 9a334cb (.)
     public function executeOLD(HasMedia $record,array $attachments,array $data, string $disk='attachments'): void
     {
         $data_attachments = [];

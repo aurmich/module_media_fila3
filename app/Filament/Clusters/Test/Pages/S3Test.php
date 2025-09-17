@@ -68,6 +68,10 @@ class S3Test extends XotBasePage
      *
      * @return array<Action>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 9a334cb (.)
     protected function getFormActions(): array
     {
 

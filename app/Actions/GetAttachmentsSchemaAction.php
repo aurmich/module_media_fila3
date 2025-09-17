@@ -26,6 +26,7 @@ use Filament\Resources\Resource as FilamentResource;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 
+<<<<<<< HEAD
 /**
  *
 */
@@ -34,6 +35,12 @@ class GetAttachmentsSchemaAction
     /**
      * 
      */
+=======
+
+class GetAttachmentsSchemaAction
+{
+    
+>>>>>>> 9a334cb (.)
     public function execute(array $attachments, string $disk='attachments'): array
     {
         $schema = [];

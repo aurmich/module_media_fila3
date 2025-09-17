@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 return array (
   'pages' => 'Pagine',
   'widgets' => 'Widgets',
@@ -18,6 +19,26 @@ return array (
   ),
   'fields' => 
   array (
+=======
+return  [
+  'pages' => 'Pagine',
+  'widgets' => 'Widgets',
+  'navigation' => 
+   [
+    'name' => 'Media',
+    'plural' => 'Media',
+    'group' => 
+     [
+      'name' => 'Sistema',
+      'description' => 'Gestione dei file multimediali',
+    ],
+    'label' => 'media',
+    'sort' => 20,
+    'icon' => 'media-main-animated',
+  ],
+  'fields' => 
+   [
+>>>>>>> 9a334cb (.)
     'name' => 'Nome',
     'guard_name' => 'Guard',
     'collection_name' => 'Collezione',
@@ -29,6 +50,7 @@ return array (
     'first_name' => 'Nome',
     'last_name' => 'Cognome',
     'select_all' => 
+<<<<<<< HEAD
     array (
       'name' => 'Seleziona Tutti',
       'message' => '',
@@ -63,3 +85,39 @@ return array (
     'label' => 'media.model',
   ),
 );
+=======
+     [
+      'name' => 'Seleziona Tutti',
+      'message' => '',
+    ],
+    'creator' => 
+     [
+      'name' => 'Creatore',
+    ],
+    'uploaded_at' => 'Caricato il',
+  ],
+  'actions' => 
+   [
+    'import' => 
+     [
+      'fields' => 
+       [
+        'import_file' => 'Seleziona un file XLS o CSV da caricare',
+      ],
+    ],
+    'export' => 
+     [
+      'filename_prefix' => 'Aree al',
+      'columns' => 
+       [
+        'name' => 'Nome area',
+        'parent_name' => 'Nome area livello superiore',
+      ],
+    ],
+  ],
+  'model' => 
+   [
+    'label' => 'media.model',
+  ],
+];
+>>>>>>> 9a334cb (.)

@@ -14,6 +14,10 @@ class MediaServiceProvider extends XotBaseServiceProvider
 
     protected string $module_ns = __NAMESPACE__;
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 9a334cb (.)
     public function boot(): void
     {
         parent::boot();

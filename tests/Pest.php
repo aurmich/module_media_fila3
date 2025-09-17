@@ -29,6 +29,7 @@ pest()->extend(TestCase::class)
 |
 */
 
+<<<<<<< HEAD
 expect()->extend('toBeMedia', function () {
     return $this->toBeInstanceOf(\Modules\Media\Models\Media::class);
 });
@@ -36,6 +37,11 @@ expect()->extend('toBeMedia', function () {
 expect()->extend('toBeMediaCollection', function () {
     return $this->toBeInstanceOf(\Modules\Media\Models\MediaCollection::class);
 });
+=======
+expect()->extend('toBeMedia', fn () => $this->toBeInstanceOf(\Modules\Media\Models\Media::class));
+
+expect()->extend('toBeMediaCollection', fn () => $this->toBeInstanceOf(\Modules\Media\Models\MediaCollection::class));
+>>>>>>> 9a334cb (.)
 
 /*
 |--------------------------------------------------------------------------

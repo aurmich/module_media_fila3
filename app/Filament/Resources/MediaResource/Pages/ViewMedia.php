@@ -31,6 +31,10 @@ class ViewMedia extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord
      *
      * @return array<string, \Filament\Infolists\Components\Component>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 9a334cb (.)
     public function getInfolistSchema(): array
     {
         return [

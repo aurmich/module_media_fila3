@@ -11,6 +11,10 @@ class AdminPanelProvider extends XotBasePanelProvider
 {
     protected string $module = 'Media';
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 9a334cb (.)
     public function panel(Panel $panel): Panel
     {
         $panel = parent::panel($panel);

@@ -30,6 +30,10 @@ class AwsTest extends XotBasePage
         'full' => 'Full Diagnostic',
     ];
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 9a334cb (.)
     public function form(Form $form): Form
     {
         return $form
@@ -145,7 +149,11 @@ class AwsTest extends XotBasePage
 
                     Components\KeyValue::make('aws_config')
                         ->columnSpanFull()
+<<<<<<< HEAD
                         ->state(fn () => $this->getAwsConfig()),
+=======
+                        ->state($this->getAwsConfig(...)),
+>>>>>>> 9a334cb (.)
                 ]),
         ];
     }
