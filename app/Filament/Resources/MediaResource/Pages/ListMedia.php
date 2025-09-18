@@ -22,10 +22,7 @@ class ListMedia extends XotBaseListRecords
     /**
      * @return array<string, Tables\Columns\Column>
      */
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 9a334cb (.)
     public function getTableColumns(): array
     {
         return [
@@ -56,33 +53,21 @@ class ListMedia extends XotBaseListRecords
     /**
      * @return array<string, Tables\Filters\BaseFilter>
      */
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 9a334cb (.)
     public function getTableFilters(): array
     {
         return [
             'collection_name' => SelectFilter::make('collection_name')
-<<<<<<< HEAD
-                ->options(fn () => Media::distinct()->pluck('collection_name', 'collection_name')->toArray()),
-            'mime_type' => SelectFilter::make('mime_type')
-                ->options(fn () => Media::distinct()->pluck('mime_type', 'mime_type')->toArray()),
-=======
                 ->options(Media::distinct()->pluck('collection_name', 'collection_name')->toArray(...)),
             'mime_type' => SelectFilter::make('mime_type')
                 ->options(Media::distinct()->pluck('mime_type', 'mime_type')->toArray(...)),
->>>>>>> 9a334cb (.)
         ];
     }
 
     /**
      * @return array<string, Tables\Actions\Action|Tables\Actions\ActionGroup>
      */
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 9a334cb (.)
     public function getTableActions(): array
     {
         return [

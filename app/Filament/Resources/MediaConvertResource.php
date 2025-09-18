@@ -17,10 +17,7 @@ class MediaConvertResource extends XotBaseResource
     /**
      * @return array<string, \Filament\Forms\Components\Component>
      */
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 9a334cb (.)
     public static function getFormSchema(): array
     {
         return [
@@ -61,20 +58,14 @@ class MediaConvertResource extends XotBaseResource
         ];
     }
 
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 9a334cb (.)
     public static function getRelations(): array
     {
         return [
         ];
     }
 
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 9a334cb (.)
     public static function getPages(): array
     {
         return [

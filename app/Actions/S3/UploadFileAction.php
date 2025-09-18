@@ -93,11 +93,7 @@ class UploadFileAction extends BaseS3Action
 
         } catch (\Exception $exception) {
             // Initialize $sourceFile as null if not already defined
-<<<<<<< HEAD
-            $sourceFile = $sourceFile ?? null;
-=======
             $sourceFile ??= null;
->>>>>>> 9a334cb (.)
             
             if (isset($sourceFile) && is_resource($sourceFile)) {
                 fclose($sourceFile);
