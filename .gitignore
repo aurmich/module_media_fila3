@@ -68,13 +68,19 @@ yarn-error.log
 npm-debug.log
 composer.lock
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e5f058cd1 (.)
 composer.lock
 package-lock.json
 *.cache
 yarn-error.log
 npm-debug.log
+<<<<<<< HEAD
 >>>>>>> 42aa9dff2 (.)
+=======
+>>>>>>> e5f058cd1 (.)
 .phpunit.result.cache
 .php-cs-fixer.cache
 
@@ -97,6 +103,7 @@ public_html/storage
 public_html/hot
 storage/*.key
 .env
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 .env.*
@@ -188,6 +195,8 @@ test_media_files/
 =======
 =======
 >>>>>>> 42aa9dff2 (.)
+=======
+>>>>>>> e5f058cd1 (.)
 
 # Database directories
 database/Factories_
@@ -232,8 +241,11 @@ cache/
 .windsurf/
 .cursor/
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 9a334cb (.)
 =======
+=======
+>>>>>>> e5f058cd1 (.)
 # Old directories
 resources/views/Components_old
 database/Migrations_old
@@ -247,4 +259,7 @@ database/Migrations_old
 database/Seeders_old
 database/Factories_old
 database_old
+<<<<<<< HEAD
 >>>>>>> 42aa9dff2 (.)
+=======
+>>>>>>> e5f058cd1 (.)
