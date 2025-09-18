@@ -67,6 +67,14 @@ package-lock.json
 yarn-error.log
 npm-debug.log
 composer.lock
+<<<<<<< HEAD
+=======
+composer.lock
+package-lock.json
+*.cache
+yarn-error.log
+npm-debug.log
+>>>>>>> 42aa9dff2 (.)
 .phpunit.result.cache
 .php-cs-fixer.cache
 
@@ -89,6 +97,7 @@ public_html/storage
 public_html/hot
 storage/*.key
 .env
+<<<<<<< HEAD
 <<<<<<< HEAD
 .env.*
 !.env.example
@@ -177,6 +186,8 @@ test_media_files/
 # END OF MEDIA .GITIGNORE
 # ==============================================
 =======
+=======
+>>>>>>> 42aa9dff2 (.)
 
 # Database directories
 database/Factories_
@@ -220,4 +231,20 @@ cache/
 # Development tools
 .windsurf/
 .cursor/
+<<<<<<< HEAD
 >>>>>>> 9a334cb (.)
+=======
+# Old directories
+resources/views/Components_old
+database/Migrations_old
+database/Seeders_old
+database/Factories_old
+database_old
+
+# Old directories to ignore
+resources/views/Components_old
+database/Migrations_old
+database/Seeders_old
+database/Factories_old
+database_old
+>>>>>>> 42aa9dff2 (.)
