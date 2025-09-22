@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Gestione dei File in 
 
 ## Panoramica
@@ -7,6 +8,8 @@ Questo documento descrive le best practice per la gestione dei file in , inclusi
 ## Struttura delle Directory
 
  utilizza una struttura organizzata per l'archiviazione dei file:
+=======
+>>>>>>> b97b11d (.)
 # Gestione dei File in SaluteOra
 
 ## Panoramica
@@ -32,7 +35,10 @@ SaluteOra utilizza una struttura organizzata per l'archiviazione dei file:
 
 ### Utilizzo di Filament
 
+<<<<<<< HEAD
 Per i form amministrativi,  utilizza il componente `FileUpload` di Filament:
+=======
+>>>>>>> b97b11d (.)
 Per i form amministrativi, SaluteOra utilizza il componente `FileUpload` di Filament:
 
 ```php
@@ -45,11 +51,18 @@ FileUpload::make('certifications')
     ->maxSize(5120) // 5MB
 ```
 
+<<<<<<< HEAD
 Per una documentazione dettagliata sull'utilizzo di `FileUpload`, consulta la [Gestione dei File Upload in Filament](../../UI/docs/filament-file-uploads.md).
 
 ### Utilizzo di Livewire
 
 Per i form frontend,  utilizza Livewire:
+=======
+Per una documentazione dettagliata sull'utilizzo di `FileUpload`, consulta la [Gestione dei File Upload in Filament](/docs/filament-file-uploads.md).
+
+### Utilizzo di Livewire
+
+>>>>>>> b97b11d (.)
 Per i form frontend, SaluteOra utilizza Livewire:
 
 ```php
@@ -88,7 +101,11 @@ Schema::table('users', function (Blueprint $table) {
 });
 ```
 
+<<<<<<< HEAD
 Per una documentazione dettagliata sulla mappatura dei campi, consulta la Mappatura dei Campi Database nel Modulo Patient (da creare se necessario).
+=======
+Per una documentazione dettagliata sulla mappatura dei campi, consulta la [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/docs/DATABASE_FIELD_MAPPING.md).
+>>>>>>> b97b11d (.)
 
 ## Accesso ai File
 
@@ -102,7 +119,10 @@ $url = Storage::url($path);
 
 ### Controllo degli Accessi
 
+<<<<<<< HEAD
  implementa un sistema di controllo degli accessi per i file sensibili:
+=======
+>>>>>>> b97b11d (.)
 SaluteOra implementa un sistema di controllo degli accessi per i file sensibili:
 
 ```php
@@ -164,7 +184,15 @@ protected static function booted()
 
 ## Documentazione Correlata
 
+<<<<<<< HEAD
 - [Gestione dei File Upload in Filament](../../UI/docs/filament-file-uploads.md)
 - [Migrazioni del Database](../../Xot/docs/migration-standards.md)
 - [Gestione degli Utenti](../../User/docs/user-management.md)
 - [Pattern di Ereditarietà dei Modelli](../../Xot/docs/archive/model-inheritance-patterns.md)
+=======
+- [Gestione dei File Upload in Filament](/docs/filament-file-uploads.md)
+- [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/docs/DATABASE_FIELD_MAPPING.md)
+- [Migrazioni del Database](/docs/database-migrations.md)
+- [Gestione degli Utenti](/docs/user-management.md)
+- [Pattern di Ereditarietà dei Modelli](/docs/model-inheritance-patterns.md)
+>>>>>>> b97b11d (.)

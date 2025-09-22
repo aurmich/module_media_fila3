@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> b97b11d (.)
 <x-filament::page>
     @php
         // Ensure $results is defined with a default value

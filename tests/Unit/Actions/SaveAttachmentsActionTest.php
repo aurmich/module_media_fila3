@@ -9,7 +9,10 @@ use Mockery;
 use Modules\Media\Actions\SaveAttachmentsAction;
 use Modules\Media\Models\Media;
 use Spatie\MediaLibrary\HasMedia;
+<<<<<<< HEAD
 use Tests\TestCase;
+=======
+>>>>>>> b97b11d (.)
 
 class SaveAttachmentsActionTest extends TestCase
 {
@@ -22,6 +25,7 @@ class SaveAttachmentsActionTest extends TestCase
     public function test_executes_save_attachments_successfully(): void
     {
         // Arrange
+<<<<<<< HEAD
         $action = new SaveAttachmentsAction();
 
         // Mock del record HasMedia
@@ -30,6 +34,20 @@ class SaveAttachmentsActionTest extends TestCase
         $record->shouldReceive('usingFileName')->andReturnSelf();
         $record->shouldReceive('toMediaCollection')->andReturn(new Media());
         $record->shouldReceive('update')->andReturn(true);
+=======
+        $action = new SaveAttachmentsAction;
+
+        // Mock del record HasMedia
+        $record = Mockery::mock(HasMedia::class);
+        $record->shouldReceive('addMedia')
+            ->andReturnSelf();
+        $record->shouldReceive('usingFileName')
+            ->andReturnSelf();
+        $record->shouldReceive('toMediaCollection')
+            ->andReturn(new Media);
+        $record->shouldReceive('update')
+            ->andReturn(true);
+>>>>>>> b97b11d (.)
 
         $attachments = ['invoice', 'contract'];
         $data = [
@@ -45,17 +63,31 @@ class SaveAttachmentsActionTest extends TestCase
         $action->execute($record, $attachments, $data, 'attachments');
 
         // Assert
+<<<<<<< HEAD
         static::assertTrue(Storage::disk('attachments')->exists('temp/invoice.pdf'));
         static::assertTrue(Storage::disk('attachments')->exists('temp/contract.pdf'));
+=======
+        $this->assertTrue(Storage::disk('attachments')->exists('temp/invoice.pdf'));
+        $this->assertTrue(Storage::disk('attachments')->exists('temp/contract.pdf'));
+>>>>>>> b97b11d (.)
     }
 
     public function test_handles_empty_attachments(): void
     {
         // Arrange
+<<<<<<< HEAD
         $action = new SaveAttachmentsAction();
 
         $record = Mockery::mock(HasMedia::class);
         $record->shouldReceive('update')->with([])->andReturn(true);
+=======
+        $action = new SaveAttachmentsAction;
+
+        $record = Mockery::mock(HasMedia::class);
+        $record->shouldReceive('update')
+            ->with([])
+            ->andReturn(true);
+>>>>>>> b97b11d (.)
 
         $attachments = [];
         $data = [];
@@ -64,16 +96,29 @@ class SaveAttachmentsActionTest extends TestCase
         $action->execute($record, $attachments, $data, 'attachments');
 
         // Assert - non dovrebbe lanciare eccezioni
+<<<<<<< HEAD
         static::assertTrue(true);
+=======
+        $this->assertTrue(true);
+>>>>>>> b97b11d (.)
     }
 
     public function test_skips_nonexistent_files(): void
     {
         // Arrange
+<<<<<<< HEAD
         $action = new SaveAttachmentsAction();
 
         $record = Mockery::mock(HasMedia::class);
         $record->shouldReceive('update')->with([])->andReturn(true);
+=======
+        $action = new SaveAttachmentsAction;
+
+        $record = Mockery::mock(HasMedia::class);
+        $record->shouldReceive('update')
+            ->with([])
+            ->andReturn(true);
+>>>>>>> b97b11d (.)
 
         $attachments = ['invoice'];
         $data = [
@@ -84,16 +129,28 @@ class SaveAttachmentsActionTest extends TestCase
         $action->execute($record, $attachments, $data, 'attachments');
 
         // Assert - non dovrebbe lanciare eccezioni
+<<<<<<< HEAD
         static::assertTrue(true);
+=======
+        $this->assertTrue(true);
+>>>>>>> b97b11d (.)
     }
 
     public function test_handles_storage_errors_gracefully(): void
     {
         // Arrange
+<<<<<<< HEAD
         $action = new SaveAttachmentsAction();
 
         $record = Mockery::mock(HasMedia::class);
         $record->shouldReceive('addMedia')->andThrow(new \Exception('Storage error'));
+=======
+        $action = new SaveAttachmentsAction;
+
+        $record = Mockery::mock(HasMedia::class);
+        $record->shouldReceive('addMedia')
+            ->andThrow(new \Exception('Storage error'));
+>>>>>>> b97b11d (.)
 
         $attachments = ['invoice'];
         $data = [
@@ -112,6 +169,7 @@ class SaveAttachmentsActionTest extends TestCase
     public function test_uses_correct_disk(): void
     {
         // Arrange
+<<<<<<< HEAD
         $action = new SaveAttachmentsAction();
 
         $record = Mockery::mock(HasMedia::class);
@@ -119,6 +177,19 @@ class SaveAttachmentsActionTest extends TestCase
         $record->shouldReceive('usingFileName')->andReturnSelf();
         $record->shouldReceive('toMediaCollection')->andReturn(new Media());
         $record->shouldReceive('update')->andReturn(true);
+=======
+        $action = new SaveAttachmentsAction;
+
+        $record = Mockery::mock(HasMedia::class);
+        $record->shouldReceive('addMedia')
+            ->andReturnSelf();
+        $record->shouldReceive('usingFileName')
+            ->andReturnSelf();
+        $record->shouldReceive('toMediaCollection')
+            ->andReturn(new Media);
+        $record->shouldReceive('update')
+            ->andReturn(true);
+>>>>>>> b97b11d (.)
 
         $attachments = ['invoice'];
         $data = [
@@ -133,12 +204,17 @@ class SaveAttachmentsActionTest extends TestCase
         $action->execute($record, $attachments, $data, 'custom_disk');
 
         // Assert
+<<<<<<< HEAD
         static::assertTrue(Storage::disk('custom_disk')->exists('temp/invoice.pdf'));
+=======
+        $this->assertTrue(Storage::disk('custom_disk')->exists('temp/invoice.pdf'));
+>>>>>>> b97b11d (.)
     }
 
     public function test_cleans_up_temp_files(): void
     {
         // Arrange
+<<<<<<< HEAD
         $action = new SaveAttachmentsAction();
 
         $record = Mockery::mock(HasMedia::class);
@@ -146,6 +222,19 @@ class SaveAttachmentsActionTest extends TestCase
         $record->shouldReceive('usingFileName')->andReturnSelf();
         $record->shouldReceive('toMediaCollection')->andReturn(new Media());
         $record->shouldReceive('update')->andReturn(true);
+=======
+        $action = new SaveAttachmentsAction;
+
+        $record = Mockery::mock(HasMedia::class);
+        $record->shouldReceive('addMedia')
+            ->andReturnSelf();
+        $record->shouldReceive('usingFileName')
+            ->andReturnSelf();
+        $record->shouldReceive('toMediaCollection')
+            ->andReturn(new Media);
+        $record->shouldReceive('update')
+            ->andReturn(true);
+>>>>>>> b97b11d (.)
 
         $attachments = ['invoice'];
         $data = [
@@ -159,12 +248,17 @@ class SaveAttachmentsActionTest extends TestCase
 
         // Assert - il file temporaneo dovrebbe essere pulito
         // Questo test verifica che la pulizia avvenga nel finally block
+<<<<<<< HEAD
         static::assertTrue(true);
+=======
+        $this->assertTrue(true);
+>>>>>>> b97b11d (.)
     }
 
     public function test_handles_multiple_attachments(): void
     {
         // Arrange
+<<<<<<< HEAD
         $action = new SaveAttachmentsAction();
 
         $record = Mockery::mock(HasMedia::class);
@@ -172,6 +266,22 @@ class SaveAttachmentsActionTest extends TestCase
         $record->shouldReceive('usingFileName')->times(3)->andReturnSelf();
         $record->shouldReceive('toMediaCollection')->times(3)->andReturn(new Media());
         $record->shouldReceive('update')->andReturn(true);
+=======
+        $action = new SaveAttachmentsAction;
+
+        $record = Mockery::mock(HasMedia::class);
+        $record->shouldReceive('addMedia')
+            ->times(3)
+            ->andReturnSelf();
+        $record->shouldReceive('usingFileName')
+            ->times(3)
+            ->andReturnSelf();
+        $record->shouldReceive('toMediaCollection')
+            ->times(3)
+            ->andReturn(new Media);
+        $record->shouldReceive('update')
+            ->andReturn(true);
+>>>>>>> b97b11d (.)
 
         $attachments = ['invoice', 'contract', 'receipt'];
         $data = [
@@ -189,8 +299,14 @@ class SaveAttachmentsActionTest extends TestCase
         $action->execute($record, $attachments, $data, 'attachments');
 
         // Assert
+<<<<<<< HEAD
         static::assertTrue(Storage::disk('attachments')->exists('temp/invoice.pdf'));
         static::assertTrue(Storage::disk('attachments')->exists('temp/contract.pdf'));
         static::assertTrue(Storage::disk('attachments')->exists('temp/receipt.pdf'));
+=======
+        $this->assertTrue(Storage::disk('attachments')->exists('temp/invoice.pdf'));
+        $this->assertTrue(Storage::disk('attachments')->exists('temp/contract.pdf'));
+        $this->assertTrue(Storage::disk('attachments')->exists('temp/receipt.pdf'));
+>>>>>>> b97b11d (.)
     }
 }

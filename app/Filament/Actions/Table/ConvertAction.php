@@ -31,8 +31,12 @@ class ConvertAction extends Action
                     ->inline()
                     ->inlineLabel(false),
             ])
+<<<<<<< HEAD
             ->action(dddx(...));
 
+=======
+            ->action(fn ($record): string => dddx($record));
+>>>>>>> b97b11d (.)
         // ->requiresConfirmation()
     }
 }

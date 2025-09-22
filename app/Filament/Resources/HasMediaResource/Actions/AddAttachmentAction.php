@@ -18,24 +18,45 @@ class AddAttachmentAction extends Action
     protected function setUp(): void
     {
         parent::setUp();
+<<<<<<< HEAD
         $this->icon('heroicon-o-plus')
             ->color('success')
             ->button()
             ->form(fn(): array => static::getFormSchema(false))
             ->action(static::formHandlerCallback(...));
+=======
+        $this
+            ->icon('heroicon-o-plus')
+            ->color('success')
+            ->button()
+            ->form(
+                fn (): array => static::getFormSchema(false)
+            )
+            ->action(
+                fn (RelationManager $livewire, array $data) => static::formHandlerCallback($livewire, $data),
+            );
+>>>>>>> b97b11d (.)
     }
 
     public static function trans(string $key): string
     {
+<<<<<<< HEAD
         Assert::string(
             $ris = trans('media::add_attachment_action.' . $key),
             '[' . $key . '][' . __LINE__ . '][' . class_basename(__CLASS__) . ']',
         );
+=======
+        Assert::string($ris = trans('media::add_attachment_action.'.$key), '['.$key.']['.__LINE__.']['.class_basename(__CLASS__).']');
+>>>>>>> b97b11d (.)
 
         return $ris;
     }
 
+<<<<<<< HEAD
     public static function getDefaultName(): null|string
+=======
+    public static function getDefaultName(): ?string
+>>>>>>> b97b11d (.)
     {
         return 'add_attachment';
     }
@@ -60,6 +81,7 @@ class AddAttachmentAction extends Action
                 ->required()
                 ->columnSpanFull(),
             /*
+<<<<<<< HEAD
              * Radio::make('attachment_type')
              * ->hiddenLabel()
              * ->options(
@@ -72,6 +94,20 @@ class AddAttachmentAction extends Action
              * ->required()
              * ->columnSpanFull(),
              */
+=======
+            Radio::make('attachment_type')
+                ->hiddenLabel()
+                ->options(
+                    AttachmentTypeEnum::descriptionsByValue($asset ? AttachmentTypeEnum::cases() : AttachmentTypeEnum::operationCases()),
+                )
+                ->default(AttachmentTypeEnum::Image())
+                ->columns(
+                    $asset ? \count(AttachmentTypeEnum::cases()) : \count(AttachmentTypeEnum::operationCases()),
+                )
+                ->required()
+                ->columnSpanFull(),
+            */
+>>>>>>> b97b11d (.)
             // Radio::make('attachment_type')->columnSpanFull(),
             TextInput::make('name')
                 ->hint(static::trans('fields.name_hint'))
@@ -87,17 +123,32 @@ class AddAttachmentAction extends Action
         $mediaCollection = $data['attachment_type'] ?? 'default';
         // $mediaCollection = 'default';
 
+<<<<<<< HEAD
         if (!method_exists($ownerRecord, 'addMediaFromDisk')) {
+=======
+        if (! method_exists($ownerRecord, 'addMediaFromDisk')) {
+>>>>>>> b97b11d (.)
             throw new \Exception('wip');
         }
 
         $attachment = $ownerRecord
+<<<<<<< HEAD
             ->addMediaFromDisk($data['file'], config('attachment.upload.disk.driver'))
             ->setName($data['name'] ?? Str::beforeLast($data['original_file_name'], '.'))
+=======
+            ->addMediaFromDisk(
+                $data['file'],
+                config('attachment.upload.disk.driver'),
+            )
+            ->setName(
+                $data['name'] ?? Str::beforeLast($data['original_file_name'], '.'),
+            )
+>>>>>>> b97b11d (.)
             ->preservingOriginal()
             ->toMediaCollection($mediaCollection);
 
         $user_id = authId();
+<<<<<<< HEAD
         $attachment->update([
             'created_by' => $user_id,
             'updated_by' => $user_id,
@@ -108,5 +159,18 @@ class AddAttachmentAction extends Action
          * $attachment->created_by=$user_id;
          * $attachment->save();
          */
+=======
+        $attachment->update(
+            [
+                'created_by' => $user_id,
+                'updated_by' => $user_id,
+            ]
+        );
+        /*
+        $attachment->created_by=$user_id;
+        $attachment->created_by=$user_id;
+        $attachment->save();
+        */
+>>>>>>> b97b11d (.)
     }
 }

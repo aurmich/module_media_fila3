@@ -41,6 +41,10 @@ return [
             'tooltip' => 'Invia email con allegato per test',
         ],
     ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> b97b11d (.)
     'notifications' => [
         'credentials_tested' => 'Credenziali AWS testate',
         'bucket_policy_tested' => 'Policy bucket testata',
@@ -56,9 +60,17 @@ return [
         'email_with_attachment' => 'Email con allegato inviata correttamente',
         'email_failed' => 'Invio email fallito',
     ],
+<<<<<<< HEAD
     'debug' => [
         'run_tests_message' => 'Esegui i test per vedere i risultati qui...',
     ],
+=======
+
+    'debug' => [
+        'run_tests_message' => 'Esegui i test per vedere i risultati qui...',
+    ],
+
+>>>>>>> b97b11d (.)
     'fields' => [
         'attachment' => [
             'label' => 'Allegato',
@@ -71,6 +83,10 @@ return [
             'helper_text' => 'Output dettagliato dei test eseguiti',
         ],
     ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> b97b11d (.)
     'messages' => [
         'test_successful' => 'Test completato con successo',
         'test_failed' => 'Test fallito',
@@ -81,6 +97,10 @@ return [
         'connection_ok' => 'Connessione stabilita',
         'connection_failed' => 'Connessione fallita',
     ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> b97b11d (.)
     'errors' => [
         'aws_credentials_invalid' => 'Credenziali AWS non valide',
         's3_bucket_inaccessible' => 'Bucket S3 non accessibile',
@@ -89,6 +109,10 @@ return [
         'permissions_insufficient' => 'Permessi insufficienti',
         'unknown_error' => 'Errore sconosciuto',
     ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> b97b11d (.)
     'solutions' => [
         'check_credentials' => 'Verifica le credenziali AWS in .env',
         'check_bucket_name' => 'Verifica il nome del bucket S3',

@@ -12,12 +12,19 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class MediaConvertResource extends XotBaseResource
 {
+<<<<<<< HEAD
     protected static null|string $model = MediaConvert::class;
+=======
+    protected static ?string $model = MediaConvert::class;
+>>>>>>> b97b11d (.)
 
     /**
      * @return array<string, \Filament\Forms\Components\Component>
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> b97b11d (.)
     public static function getFormSchema(): array
     {
         return [
@@ -58,6 +65,7 @@ class MediaConvertResource extends XotBaseResource
         ];
     }
 
+<<<<<<< HEAD
     #[\Override]
     public static function getRelations(): array
     {
@@ -65,6 +73,14 @@ class MediaConvertResource extends XotBaseResource
     }
 
     #[\Override]
+=======
+    public static function getRelations(): array
+    {
+        return [
+        ];
+    }
+
+>>>>>>> b97b11d (.)
     public static function getPages(): array
     {
         return [

@@ -10,12 +10,21 @@ uses(Tests\TestCase::class);
 
 test('get form schema returns expected components', function (): void {
     $schema = MediaConvertResource::getFormSchema();
+<<<<<<< HEAD
 
     expect($schema)->toBeArray();
     expect($schema)->not->toBeEmpty();
 
     $componentClasses = array_map(get_class(...), $schema);
 
+=======
+    
+    expect($schema)->toBeArray();
+    expect($schema)->not->toBeEmpty();
+    
+    $componentClasses = array_map(fn ($c) => get_class($c), $schema);
+    
+>>>>>>> b97b11d (.)
     expect($componentClasses)->toContain(Radio::class);
     expect($componentClasses)->toContain(TextInput::class);
 });

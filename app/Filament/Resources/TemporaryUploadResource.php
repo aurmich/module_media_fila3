@@ -18,12 +18,19 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class TemporaryUploadResource extends XotBaseResource
 {
+<<<<<<< HEAD
     protected static null|string $model = TemporaryUpload::class;
+=======
+    protected static ?string $model = TemporaryUpload::class;
+>>>>>>> b97b11d (.)
 
     /**
      * @return array<string, \Filament\Forms\Components\Component>
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> b97b11d (.)
     public static function getFormSchema(): array
     {
         return [
@@ -32,18 +39,33 @@ class TemporaryUploadResource extends XotBaseResource
                 ->preserveFilenames()
                 ->acceptedFileTypes(['image/*', 'application/pdf', 'application/msword'])
                 ->maxSize(10240),
+<<<<<<< HEAD
             'folder' => \Filament\Forms\Components\TextInput::make('folder')->required()->maxLength(255),
             'expires_at' => \Filament\Forms\Components\DateTimePicker::make('expires_at')->required(),
+=======
+            'folder' => \Filament\Forms\Components\TextInput::make('folder')
+                ->required()
+                ->maxLength(255),
+            'expires_at' => \Filament\Forms\Components\DateTimePicker::make('expires_at')
+                ->required(),
+>>>>>>> b97b11d (.)
         ];
     }
 
     /**
      * @psalm-return array<never, never>
      */
+<<<<<<< HEAD
     #[\Override]
     public static function getRelations(): array
     {
         return [];
+=======
+    public static function getRelations(): array
+    {
+        return [
+        ];
+>>>>>>> b97b11d (.)
     }
 
     /**
@@ -51,7 +73,10 @@ class TemporaryUploadResource extends XotBaseResource
      *
      * @psalm-return array{index: PageRegistration, create: PageRegistration, edit: PageRegistration}
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> b97b11d (.)
     public static function getPages(): array
     {
         return [

@@ -13,7 +13,10 @@ class ConvertMedia extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewReco
 {
     protected static string $resource = MediaResource::class;
 
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> b97b11d (.)
     public function getInfolistSchema(): array
     {
         return [

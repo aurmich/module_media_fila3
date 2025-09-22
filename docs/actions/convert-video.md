@@ -58,4 +58,8 @@ $action = new ConvertVideoByConvertDataAction();
 $convertedPath = $action->execute($data);
 ```
 
+<<<<<<< HEAD
 [Torna alla documentazione Media](../README.md) 
+=======
+[Torna alla documentazione Media](/docs/modules/module_media.md#actions) 
+>>>>>>> b97b11d (.)

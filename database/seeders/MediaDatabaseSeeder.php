@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Media\database\seeders;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> b97b11d (.)
 use Illuminate\Database\Seeder;
 
 class MediaDatabaseSeeder extends Seeder

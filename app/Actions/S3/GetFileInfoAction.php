@@ -18,6 +18,7 @@ class GetFileInfoAction extends BaseS3Action
         try {
             $result = $this->s3Client->headObject([
                 'Bucket' => $this->bucketName,
+<<<<<<< HEAD
                 'Key' => $key,
             ]);
 
@@ -25,6 +26,13 @@ class GetFileInfoAction extends BaseS3Action
             $effectiveUri = is_array($metadata) && isset($metadata['effectiveUri'])
                 ? ((string) $metadata['effectiveUri'])
                 : null;
+=======
+                'Key'    => $key,
+            ]);
+
+            $metadata = $result['@metadata'] ?? [];
+            $effectiveUri = is_array($metadata) && isset($metadata['effectiveUri']) ? (string) $metadata['effectiveUri'] : null;
+>>>>>>> b97b11d (.)
 
             $fileInfo = [
                 'exists' => true,
@@ -34,28 +42,52 @@ class GetFileInfoAction extends BaseS3Action
                 'contentType' => $result['ContentType'] ?? null,
                 'lastModified' => $result['LastModified'] ?? null,
                 'etag' => $result['ETag'] ?? null,
+<<<<<<< HEAD
                 'metadata' => $result['Metadata'] ?? [],
+=======
+                'metadata' => $result['Metadata'] ?? []
+>>>>>>> b97b11d (.)
             ];
 
             $this->logger->info('File info retrieved successfully', [
                 'key' => $key,
+<<<<<<< HEAD
                 'size' => $fileInfo['contentLength'],
             ]);
 
             return $fileInfo;
+=======
+                'size' => $fileInfo['contentLength']
+            ]);
+
+            return $fileInfo;
+
+>>>>>>> b97b11d (.)
         } catch (S3Exception $exception) {
             $this->logger->error('Error getting file info from S3', [
                 'key' => $key,
                 'error' => $exception->getMessage(),
+<<<<<<< HEAD
                 'statusCode' => $exception->getStatusCode(),
+=======
+                'statusCode' => $exception->getStatusCode()
+>>>>>>> b97b11d (.)
             ]);
 
             return [
                 'exists' => false,
                 'key' => $key,
                 'error' => $exception->getMessage(),
+<<<<<<< HEAD
                 'errorCode' => $exception->getStatusCode(),
             ];
         }
     }
 }
+=======
+                'errorCode' => $exception->getStatusCode()
+            ];
+        }
+    }
+}
+>>>>>>> b97b11d (.)

@@ -16,6 +16,7 @@ class GetVideoDurationAction
 {
     use QueueableAction;
 
+<<<<<<< HEAD
     public function execute(string $disk, string $file): null|int
     {
         if (!Storage::disk($disk)->exists($file)) {
@@ -23,5 +24,16 @@ class GetVideoDurationAction
         } // returns an int
 
         return FFMpeg::fromDisk($disk)->open($file)->getDurationInSeconds();
+=======
+    public function execute(string $disk, string $file): ?int
+    {
+        if (! Storage::disk($disk)->exists($file)) {
+            return null;
+        } // returns an int
+
+        return FFMpeg::fromDisk($disk)
+            ->open($file)
+            ->getDurationInSeconds();
+>>>>>>> b97b11d (.)
     }
 }

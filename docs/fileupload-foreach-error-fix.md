@@ -13,7 +13,10 @@ L'errore si verifica nel metodo `getUploadedFiles` di `Filament\Forms\Components
 
 ### Contesto dell'Errore
 - **Widget**: `Modules\User\Filament\Widgets\RegistrationWidget`
+<<<<<<< HEAD
 - **Resource**: `Modules\<nome modulo>\Filament\Resources\PatientResource`
+=======
+>>>>>>> b97b11d (.)
 - **Resource**: `Modules\SaluteOra\Filament\Resources\PatientResource`
 - **Campi coinvolti**:
   - `data.health_card`
