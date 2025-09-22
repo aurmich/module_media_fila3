@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Media\Tests\Unit\Actions;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Forms\Components\FileUpload;
 use Modules\Media\Actions\GetAttachmentsSchemaAction;
 <<<<<<< HEAD
@@ -20,12 +21,15 @@ use Filament\Forms\Form;
 use Filament\Forms\Components\FileUpload;
 >>>>>>> 372a792 (.)
 >>>>>>> 57c6c34 (.)
+=======
+>>>>>>> ab7455b (.)
 
 class GetAttachmentsSchemaActionTest extends TestCase
 {
     public function test_returns_attachment_schema(): void
     {
         // Arrange
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction();
@@ -63,12 +67,15 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $this->assertCount(3, $schema);
         
 >>>>>>> 372a792 (.)
+=======
+>>>>>>> ab7455b (.)
         // Verifica che ogni attachment abbia un FileUpload component
         foreach ($schema as $component) {
             $this->assertInstanceOf(FileUpload::class, $component);
 >>>>>>> b97b11d (.)
         }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     public function test_schema_has_correct_names(): void
@@ -96,6 +103,8 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $schema = $action->execute($attachments);
         
 >>>>>>> 372a792 (.)
+=======
+>>>>>>> ab7455b (.)
         // Assert
 <<<<<<< HEAD
         static::assertSame('invoice', $schema[0]->getName());
@@ -105,6 +114,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $this->assertEquals('contract', $schema[1]->getName());
 >>>>>>> b97b11d (.)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     public function test_schema_has_correct_labels(): void
@@ -166,6 +176,8 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $schema = $action->execute($attachments);
         
 >>>>>>> 372a792 (.)
+=======
+>>>>>>> ab7455b (.)
         // Assert
         $component = $schema[0];
 <<<<<<< HEAD
@@ -181,6 +193,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
 >>>>>>> b97b11d (.)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public function test_schema_has_correct_storage(): void
     {
@@ -207,6 +220,8 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $schema = $action->execute($attachments);
         
 >>>>>>> 372a792 (.)
+=======
+>>>>>>> ab7455b (.)
         // Assert
         $component = $schema[0];
 <<<<<<< HEAD
@@ -216,6 +231,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
 >>>>>>> b97b11d (.)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public function test_schema_has_correct_directory(): void
     {
@@ -242,6 +258,8 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $schema = $action->execute($attachments);
         
 >>>>>>> 372a792 (.)
+=======
+>>>>>>> ab7455b (.)
         // Assert
         $component = $schema[0];
 <<<<<<< HEAD
@@ -251,6 +269,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
 >>>>>>> b97b11d (.)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public function test_schema_has_correct_visibility(): void
     {
@@ -277,6 +296,8 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $schema = $action->execute($attachments);
         
 >>>>>>> 372a792 (.)
+=======
+>>>>>>> ab7455b (.)
         // Assert
         $component = $schema[0];
 <<<<<<< HEAD
@@ -286,6 +307,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
 >>>>>>> b97b11d (.)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public function test_schema_has_correct_max_size(): void
     {
@@ -312,6 +334,8 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $schema = $action->execute($attachments);
         
 >>>>>>> 372a792 (.)
+=======
+>>>>>>> ab7455b (.)
         // Assert
         $component = $schema[0];
 <<<<<<< HEAD
@@ -321,6 +345,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
 >>>>>>> b97b11d (.)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public function test_schema_has_correct_multiple(): void
     {
@@ -347,6 +372,8 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $schema = $action->execute($attachments);
         
 >>>>>>> 372a792 (.)
+=======
+>>>>>>> ab7455b (.)
         // Assert
         $component = $schema[0];
 <<<<<<< HEAD
@@ -356,6 +383,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
 >>>>>>> b97b11d (.)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public function test_schema_has_correct_preview(): void
     {
@@ -382,6 +410,8 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $schema = $action->execute($attachments);
         
 >>>>>>> 372a792 (.)
+=======
+>>>>>>> ab7455b (.)
         // Assert
         $component = $schema[0];
 <<<<<<< HEAD
@@ -391,6 +421,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
 >>>>>>> b97b11d (.)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public function test_schema_has_correct_download(): void
     {
@@ -417,6 +448,8 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $schema = $action->execute($attachments);
         
 >>>>>>> 372a792 (.)
+=======
+>>>>>>> ab7455b (.)
         // Assert
         $component = $schema[0];
 <<<<<<< HEAD
@@ -426,6 +459,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
 >>>>>>> b97b11d (.)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public function test_schema_has_correct_remove(): void
     {
@@ -452,6 +486,8 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $schema = $action->execute($attachments);
         
 >>>>>>> 372a792 (.)
+=======
+>>>>>>> ab7455b (.)
         // Assert
         $component = $schema[0];
 <<<<<<< HEAD
@@ -461,6 +497,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
 >>>>>>> b97b11d (.)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public function test_schema_has_correct_reorder(): void
     {
@@ -487,6 +524,8 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $schema = $action->execute($attachments);
         
 >>>>>>> 372a792 (.)
+=======
+>>>>>>> ab7455b (.)
         // Assert
         $component = $schema[0];
 <<<<<<< HEAD
@@ -496,6 +535,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
 >>>>>>> b97b11d (.)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public function test_schema_has_correct_append(): void
     {
@@ -522,6 +562,8 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $schema = $action->execute($attachments);
         
 >>>>>>> 372a792 (.)
+=======
+>>>>>>> ab7455b (.)
         // Assert
         $component = $schema[0];
 <<<<<<< HEAD
@@ -531,6 +573,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
 >>>>>>> b97b11d (.)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public function test_schema_has_correct_panel(): void
     {
@@ -557,6 +600,8 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $schema = $action->execute($attachments);
         
 >>>>>>> 372a792 (.)
+=======
+>>>>>>> ab7455b (.)
         // Assert
         $component = $schema[0];
 <<<<<<< HEAD
@@ -566,6 +611,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
 >>>>>>> b97b11d (.)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public function test_schema_has_correct_help_text(): void
     {
@@ -592,6 +638,8 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $schema = $action->execute($attachments);
         
 >>>>>>> 372a792 (.)
+=======
+>>>>>>> ab7455b (.)
         // Assert
         $component = $schema[0];
 <<<<<<< HEAD
@@ -601,6 +649,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
 >>>>>>> b97b11d (.)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public function test_schema_has_correct_placeholder(): void
     {
@@ -627,6 +676,8 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $schema = $action->execute($attachments);
         
 >>>>>>> 372a792 (.)
+=======
+>>>>>>> ab7455b (.)
         // Assert
         $component = $schema[0];
 <<<<<<< HEAD

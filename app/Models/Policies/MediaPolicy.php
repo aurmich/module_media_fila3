@@ -7,6 +7,7 @@ namespace Modules\Media\Models\Policies;
 use Modules\Media\Models\Media;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
 =======
 use Modules\Xot\Contracts\ProfileContract;
@@ -17,6 +18,8 @@ use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
 >>>>>>> 372a792 (.)
 >>>>>>> 57c6c34 (.)
+=======
+>>>>>>> ab7455b (.)
 
 class MediaPolicy extends MediaBasePolicy
 {
@@ -25,6 +28,7 @@ class MediaPolicy extends MediaBasePolicy
      */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function viewAny(UserContract $user): bool
     {
         return $user->hasPermissionTo('media.viewAny');
@@ -43,11 +47,14 @@ class MediaPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('media.viewAny');
 >>>>>>> 372a792 (.)
 >>>>>>> 57c6c34 (.)
+=======
+>>>>>>> ab7455b (.)
     }
 
     /**
      * Determine whether the user can view the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     public function view(UserContract $user, Media $_media): bool
@@ -68,11 +75,14 @@ class MediaPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('media.view');
 >>>>>>> 372a792 (.)
 >>>>>>> 57c6c34 (.)
+=======
+>>>>>>> ab7455b (.)
     }
 
     /**
      * Determine whether the user can create models.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     public function create(UserContract $user): bool
@@ -93,11 +103,14 @@ class MediaPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('media.create');
 >>>>>>> 372a792 (.)
 >>>>>>> 57c6c34 (.)
+=======
+>>>>>>> ab7455b (.)
     }
 
     /**
      * Determine whether the user can update the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     public function update(UserContract $user, Media $_media): bool
@@ -118,11 +131,14 @@ class MediaPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('media.update');
 >>>>>>> 372a792 (.)
 >>>>>>> 57c6c34 (.)
+=======
+>>>>>>> ab7455b (.)
     }
 
     /**
      * Determine whether the user can delete the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     public function delete(UserContract $user, Media $_media): bool
@@ -143,11 +159,14 @@ class MediaPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('media.delete');
 >>>>>>> 372a792 (.)
 >>>>>>> 57c6c34 (.)
+=======
+>>>>>>> ab7455b (.)
     }
 
     /**
      * Determine whether the user can restore the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     public function restore(UserContract $user, Media $_media): bool
@@ -168,11 +187,14 @@ class MediaPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('media.restore');
 >>>>>>> 372a792 (.)
 >>>>>>> 57c6c34 (.)
+=======
+>>>>>>> ab7455b (.)
     }
 
     /**
      * Determine whether the user can permanently delete the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     public function forceDelete(UserContract $user, Media $media): bool
@@ -194,3 +216,5 @@ class MediaPolicy extends MediaBasePolicy
     }
 }
 >>>>>>> 372a792 (.)
+=======
+>>>>>>> ab7455b (.)

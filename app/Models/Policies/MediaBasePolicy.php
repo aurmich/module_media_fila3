@@ -7,6 +7,7 @@ namespace Modules\Media\Models\Policies;
 use Illuminate\Auth\Access\HandlesAuthorization;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
 =======
 use Modules\Xot\Contracts\ProfileContract;
@@ -17,11 +18,14 @@ use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
 >>>>>>> 372a792 (.)
 >>>>>>> 57c6c34 (.)
+=======
+>>>>>>> ab7455b (.)
 use Modules\Xot\Datas\XotData;
 
 abstract class MediaBasePolicy
 {
     use HandlesAuthorization;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -52,7 +56,6 @@ abstract class MediaBasePolicy
         return null;
     }
 <<<<<<< HEAD
-}
 =======
+>>>>>>> ab7455b (.)
 }
->>>>>>> 372a792 (.)

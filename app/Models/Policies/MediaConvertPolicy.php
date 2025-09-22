@@ -1,5 +1,6 @@
-<?php
+<?php\n\ndeclare(strict_types=1);\n\nnamespace Modules\Media\Models\Policies;\n\nuse Modules\Media\Models\MediaConvert;\n\nclass MediaConvertPolicy extends MediaBasePolicy\n{\n}
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 namespace Modules\Media\Models\Policies;
@@ -194,3 +195,5 @@ class MediaConvertPolicy extends MediaBasePolicy
     }
 }
 >>>>>>> 372a792 (.)
+=======
+>>>>>>> ab7455b (.)
