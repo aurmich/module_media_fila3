@@ -67,6 +67,13 @@ lerna-debug.log*
 
 # Lock files and cache
 *.lock
+*.cache
+*.phar
+*.jar
+package-lock.json
+yarn-error.log
+npm-debug.log
+composer.lock
 composer.lock
 package-lock.json
 *.cache
@@ -77,6 +84,7 @@ npm-debug.log
 
 # Log files
 *.log
+error_log
 
 # Build directories
 /build/
@@ -194,10 +202,19 @@ laravel
 public_html
 =======
 
+# Database directories
+database/Factories_
+database/Factories_old
+database/Migrations_old
+
 # Local configurations
 Homestead.yaml
 Homestead.json
 /.vagrant
+
+# IDE specific
+/.idea
+.phpintel
 
 # Git specific
 .git-blame-ignore-revs
@@ -216,9 +233,30 @@ Homestead.json
 *.old1
 *.backup
 *.bak
+*.new
 
 # Documentation and cache
 docs/phpstan/
 docs/cache/
 cache/
+<<<<<<< HEAD
 >>>>>>> b97b11d (.)
+=======
+
+# Development tools
+.windsurf/
+.cursor/
+# Old directories
+resources/views/Components_old
+database/Migrations_old
+database/Seeders_old
+database/Factories_old
+database_old
+
+# Old directories to ignore
+resources/views/Components_old
+database/Migrations_old
+database/Seeders_old
+database/Factories_old
+database_old
+>>>>>>> d423579e3 (.)
