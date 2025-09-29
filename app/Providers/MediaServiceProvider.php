@@ -14,13 +14,9 @@ class MediaServiceProvider extends XotBaseServiceProvider
 
     protected string $module_ns = __NAMESPACE__;
 
-<<<<<<< HEAD
-    
-=======
     public function boot(): void
     {
         parent::boot();
         // BladeService::registerComponents($this->module_dir.'/../View/Components', 'Modules\\Media');
     }
->>>>>>> b97b11d (.)
 }

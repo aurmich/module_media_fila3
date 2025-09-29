@@ -17,11 +17,7 @@ class PowerPoint extends ImageGenerator
     /**
      * This function should return a path to an image representation of the given file.
      */
-<<<<<<< HEAD
-    public function convert(string $file, null|Conversion $_conversion = null): string
-=======
     public function convert(string $file, ?Conversion $conversion = null): string
->>>>>>> b97b11d (.)
     {
         // Here you should convert the file to an image and return generated conversion path.
         // EXAMPLE
@@ -29,11 +25,7 @@ class PowerPoint extends ImageGenerator
         // EXAMPLE
         // \PowerPoint::convertFileToImage($file)->store($pathToImageFile);
 
-<<<<<<< HEAD
-        return pathinfo($file, PATHINFO_DIRNAME) . '/' . pathinfo($file, PATHINFO_FILENAME) . '.jpg';
-=======
         return pathinfo($file, PATHINFO_DIRNAME).'/'.pathinfo($file, PATHINFO_FILENAME).'.jpg';
->>>>>>> b97b11d (.)
     }
 
     public function requirementsAreInstalled(): bool

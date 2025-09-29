@@ -14,19 +14,11 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class MediaResource extends XotBaseResource
 {
-<<<<<<< HEAD
-    protected static null|string $model = Media::class;
-=======
     protected static ?string $model = Media::class;
->>>>>>> b97b11d (.)
 
     /**
      * @return array<string, \Filament\Forms\Components\Component>
      */
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> b97b11d (.)
     public static function getFormSchema(): array
     {
         return [
@@ -49,17 +41,10 @@ class MediaResource extends XotBaseResource
     /**
      * @psalm-return array<never, never>
      */
-<<<<<<< HEAD
-    #[\Override]
-    public static function getRelations(): array
-    {
-        return [];
-=======
     public static function getRelations(): array
     {
         return [
         ];
->>>>>>> b97b11d (.)
     }
 
     /**
@@ -67,10 +52,6 @@ class MediaResource extends XotBaseResource
      *
      * @psalm-return array{index: PageRegistration, create: PageRegistration, edit: PageRegistration}
      */
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> b97b11d (.)
     public static function getPages(): array
     {
         return [

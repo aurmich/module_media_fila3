@@ -41,10 +41,7 @@ return [
             'tooltip' => 'E-Mail mit Anhang zum Testen senden',
         ],
     ],
-<<<<<<< HEAD
-=======
 
->>>>>>> b97b11d (.)
     'notifications' => [
         'credentials_tested' => 'AWS-Anmeldedaten getestet',
         'bucket_policy_tested' => 'Bucket-Richtlinie getestet',
@@ -60,17 +57,11 @@ return [
         'email_with_attachment' => 'E-Mail mit Anhang erfolgreich gesendet',
         'email_failed' => 'E-Mail-Versand fehlgeschlagen',
     ],
-<<<<<<< HEAD
-    'debug' => [
-        'run_tests_message' => 'Führen Sie Tests aus, um Ergebnisse hier zu sehen...',
-    ],
-=======
 
     'debug' => [
         'run_tests_message' => 'Führen Sie Tests aus, um Ergebnisse hier zu sehen...',
     ],
 
->>>>>>> b97b11d (.)
     'fields' => [
         'attachment' => [
             'label' => 'Anhang',
@@ -83,10 +74,7 @@ return [
             'helper_text' => 'Detaillierte Ausgabe der ausgeführten Tests',
         ],
     ],
-<<<<<<< HEAD
-=======
 
->>>>>>> b97b11d (.)
     'messages' => [
         'test_successful' => 'Test erfolgreich abgeschlossen',
         'test_failed' => 'Test fehlgeschlagen',
@@ -97,10 +85,7 @@ return [
         'connection_ok' => 'Verbindung hergestellt',
         'connection_failed' => 'Verbindung fehlgeschlagen',
     ],
-<<<<<<< HEAD
-=======
 
->>>>>>> b97b11d (.)
     'errors' => [
         'aws_credentials_invalid' => 'Ungültige AWS-Anmeldedaten',
         's3_bucket_inaccessible' => 'S3-Bucket nicht zugänglich',
@@ -109,10 +94,7 @@ return [
         'permissions_insufficient' => 'Unzureichende Berechtigungen',
         'unknown_error' => 'Unbekannter Fehler',
     ],
-<<<<<<< HEAD
-=======
 
->>>>>>> b97b11d (.)
     'solutions' => [
         'check_credentials' => 'Überprüfen Sie die AWS-Anmeldedaten in .env',
         'check_bucket_name' => 'Überprüfen Sie den S3-Bucket-Namen',

@@ -18,11 +18,7 @@ class TemporaryUploadPathGenerator
      */
     public function getPath($media): string
     {
-<<<<<<< HEAD
-        return $this->getBasePath($media) . '/' . md5($media->id . $media->uuid . 'original') . '/';
-=======
         return $this->getBasePath($media).'/'.md5($media->id . $media->uuid . 'original').'/';
->>>>>>> b97b11d (.)
     }
 
     /**
@@ -30,11 +26,7 @@ class TemporaryUploadPathGenerator
      */
     public function getPathForConversions($media): string
     {
-<<<<<<< HEAD
-        return $this->getBasePath($media) . '/' . md5($media->id . $media->uuid . 'conversion');
-=======
         return $this->getBasePath($media).'/'.md5($media->id . $media->uuid . 'conversion');
->>>>>>> b97b11d (.)
     }
 
     /**
@@ -42,11 +34,7 @@ class TemporaryUploadPathGenerator
      */
     public function getPathForResponsiveImages($media): string
     {
-<<<<<<< HEAD
-        return $this->getBasePath($media) . '/' . md5($media->id . $media->uuid . 'responsive');
-=======
         return $this->getBasePath($media).'/'.md5($media->id . $media->uuid . 'responsive');
->>>>>>> b97b11d (.)
     }
 
     /**

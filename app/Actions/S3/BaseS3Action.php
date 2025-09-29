@@ -20,34 +20,20 @@ abstract class BaseS3Action
     {
         $this->logger = $logger;
         $this->bucketName = $this->getStringConfig('media.aws.bucket_name', 'AWS_BUCKET_NAME', '');
-<<<<<<< HEAD
-
-=======
         
->>>>>>> b97b11d (.)
         $this->s3Client = new S3Client([
             'region' => $this->getStringConfig('media.aws.region', 'AWS_REGION', 'us-east-1'),
             'version' => '2006-03-01',
             'credentials' => [
-<<<<<<< HEAD
-                'key' => $this->getStringConfig('media.aws.access_key_id', 'AWS_ACCESS_KEY_ID', ''),
-                'secret' => $this->getStringConfig('media.aws.secret_access_key', 'AWS_SECRET_ACCESS_KEY', ''),
-            ],
-=======
                 'key'    => $this->getStringConfig('media.aws.access_key_id', 'AWS_ACCESS_KEY_ID', ''),
                 'secret' => $this->getStringConfig('media.aws.secret_access_key', 'AWS_SECRET_ACCESS_KEY', '')
             ]
->>>>>>> b97b11d (.)
         ]);
     }
 
     /**
      * Get string configuration value with type safety.
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> b97b11d (.)
      * @param string $configKey Config key to check first
      * @param string $envKey Environment variable key as fallback
      * @param string $default Default value if neither config nor env is valid
@@ -60,26 +46,14 @@ abstract class BaseS3Action
         if (is_string($configValue) && trim($configValue) !== '') {
             return $configValue;
         }
-<<<<<<< HEAD
-
-=======
         
->>>>>>> b97b11d (.)
         // Fallback to environment
         $envValue = env($envKey);
         if (is_string($envValue) && trim($envValue) !== '') {
             return $envValue;
         }
-<<<<<<< HEAD
-
-        // Return default
-        return $default;
-    }
-}
-=======
         
         // Return default
         return $default;
     }
 }
->>>>>>> b97b11d (.)

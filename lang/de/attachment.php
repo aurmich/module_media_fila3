@@ -1,11 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-
-=======
->>>>>>> b97b11d (.)
 return [
     'pages' => 'Seiten',
     'widgets' => 'Widgets',

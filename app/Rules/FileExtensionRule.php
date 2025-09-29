@@ -15,18 +15,6 @@ class FileExtensionRule implements Rule
 
     public function __construct(array $validExtensions = [])
     {
-<<<<<<< HEAD
-        $this->validExtensions = array_map(mb_strtolower(...), $validExtensions);
-    }
-
-    /**
-     * @param  mixed $_attribute The attribute being validated (not used in this rule)
-     * @param  UploadedFile  $value The uploaded file to validate
-     */
-    public function passes($_attribute, $value): bool
-    {
-        return in_array(mb_strtolower($value->getClientOriginalExtension()), $this->validExtensions, strict: false);
-=======
         $this->validExtensions = array_map(
             static fn (string $extension): string => mb_strtolower($extension),
             $validExtensions,
@@ -44,22 +32,15 @@ class FileExtensionRule implements Rule
             $this->validExtensions,
             strict: false,
         );
->>>>>>> b97b11d (.)
     }
 
     public function message(): array|string
     {
-<<<<<<< HEAD
-        return trans('media::validation.mime', [
-            'mimes' => implode(', ', $this->validExtensions),
-        ]);
-=======
         return trans(
             'media::validation.mime',
             [
                 'mimes' => implode(', ', $this->validExtensions),
             ]
         );
->>>>>>> b97b11d (.)
     }
 }

@@ -23,11 +23,7 @@ abstract class TestCase extends BaseTestCase
 
         // Load Media module specific configurations
         $this->loadLaravelMigrations();
-<<<<<<< HEAD
-
-=======
         
->>>>>>> b97b11d (.)
         // Seed any required data for Media tests
         $this->artisan('module:seed', ['module' => 'Media']);
     }

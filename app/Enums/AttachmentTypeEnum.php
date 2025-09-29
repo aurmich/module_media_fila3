@@ -17,29 +17,13 @@ enum AttachmentTypeEnum: string implements HasLabel
     public static function getTypeNoteDescriptionsByValues(): array
     {
         return collect(self::cases())
-<<<<<<< HEAD
-            ->mapWithKeys(static fn(self $case): array => [$case->value => $case->getTypeNote()])
-=======
             ->mapWithKeys(
                 static fn (self $case): array => [$case->value => $case->getTypeNote()],
             )
->>>>>>> b97b11d (.)
             ->toArray();
     }
 
     /* Method Modules\Media\Enums\AttachmentTypeEnum::operationCases() never returns null so it can be removed from the return type
-<<<<<<< HEAD
-     * public static function operationCases(): ?array
-     * {
-     * $originalCases = self::cases();
-     * array_pop($originalCases);
-     *
-     * return $originalCases;
-     * }
-     */
-
-    public function getTypeNote(): null|string
-=======
     public static function operationCases(): ?array
     {
         $originalCases = self::cases();
@@ -50,7 +34,6 @@ enum AttachmentTypeEnum: string implements HasLabel
         */
 
     public function getTypeNote(): ?string
->>>>>>> b97b11d (.)
     {
         $translationKey = sprintf('media::attachments.type_notes.%s', $this->value);
         if (Lang::has($translationKey)) {
@@ -62,11 +45,7 @@ enum AttachmentTypeEnum: string implements HasLabel
 
     public function getLabel(): string
     {
-<<<<<<< HEAD
-        return trans('media::attachments.types.' . $this->value);
-=======
         return trans('media::attachments.types.'.$this->value);
->>>>>>> b97b11d (.)
     }
 
     // private static function translateBaseUniquePath(): string

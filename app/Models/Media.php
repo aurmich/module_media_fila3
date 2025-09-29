@@ -10,16 +10,6 @@ namespace Modules\Media\Models;
 
 use Eloquent;
 use Exception;
-<<<<<<< HEAD
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Collection as EloquentCollection;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
-use Modules\Media\Enums\AttachmentTypeEnum;
-use Modules\Xot\Actions\Factory\GetFactoryAction;
-use Modules\Xot\Traits\Updater;
-=======
 use Modules\Xot\Traits\Updater;
 use Illuminate\Database\Eloquent\Builder;
 use Modules\Media\Enums\AttachmentTypeEnum;
@@ -28,7 +18,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
->>>>>>> b97b11d (.)
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 
 /**
@@ -249,11 +238,8 @@ class Media extends SpatieMedia
     use HasFactory;
     use Updater;
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> b97b11d (.)
     /** @var string */
     protected $connection = 'media';
 
@@ -265,14 +251,7 @@ class Media extends SpatieMedia
         // MediaLibraryPro::ensureInstalled();
 
         return static::whereIn('uuid', $uuids)
-<<<<<<< HEAD
-            ->whereHasMorph('model', [TemporaryUpload::class], static fn(Builder $builder) => $builder->where(
-                'session_id',
-                session()->getId(),
-            ))
-=======
             ->whereHasMorph('model', [TemporaryUpload::class], static fn (Builder $builder) => $builder->where('session_id', session()->getId()))
->>>>>>> b97b11d (.)
             ->get();
     }
 
@@ -290,11 +269,7 @@ class Media extends SpatieMedia
 
     /**
      * Relazione con il creatore del media.
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> b97b11d (.)
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo<\Illuminate\Database\Eloquent\Model, self>
      * @phpstan-return \Illuminate\Database\Eloquent\Relations\BelongsTo<\Illuminate\Database\Eloquent\Model, $this>
      */
@@ -314,28 +289,12 @@ class Media extends SpatieMedia
     {
         $url = $this->getUrl();
         $info = pathinfo($url);
-<<<<<<< HEAD
-        if (!isset($info['dirname'])) {
-            throw new Exception('[' . __LINE__ . '][' . class_basename($this) . ']');
-=======
         if (! isset($info['dirname'])) {
             throw new Exception('['.__LINE__.']['.class_basename($this).']');
->>>>>>> b97b11d (.)
         }
         $url = '#';
         switch ($conv) {
             case 'thumb':
-<<<<<<< HEAD
-                $url = $info['dirname'] . '/conversions/' . $info['filename'] . '-thumb.jpg';
-
-                break;
-            case '800':
-                $url = $info['dirname'] . '/conversions/' . $info['filename'] . '-800.jpg';
-
-                break;
-            case '400':
-                $url = $info['dirname'] . '/conversions/' . $info['filename'] . '-400.jpg';
-=======
                 $url = $info['dirname'].'/conversions/'.$info['filename'].'-thumb.jpg';
 
                 break;
@@ -345,7 +304,6 @@ class Media extends SpatieMedia
                 break;
             case '400':
                 $url = $info['dirname'].'/conversions/'.$info['filename'].'-400.jpg';
->>>>>>> b97b11d (.)
 
                 break;
         }
@@ -358,15 +316,9 @@ class Media extends SpatieMedia
         $conversions = [];
         foreach ($this->getGeneratedConversions() as $conv => $state) {
             $item = [
-<<<<<<< HEAD
-                'name' => is_string($conv) ? $conv : ((string) $conv),
-                'generated' => $state,
-                'src' => $this->getUrlConv(is_string($conv) ? $conv : ((string) $conv)),
-=======
                 'name' => is_string($conv) ? $conv : (string) $conv,
                 'generated' => $state,
                 'src' => $this->getUrlConv(is_string($conv) ? $conv : (string) $conv),
->>>>>>> b97b11d (.)
             ];
             $conversions[] = $item;
         }
@@ -383,17 +335,11 @@ class Media extends SpatieMedia
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
             'deleted_at' => 'datetime',
-<<<<<<< HEAD
-            'updated_by' => 'string',
-            'created_by' => 'string',
-            'deleted_by' => 'string',
-=======
 
             'updated_by' => 'string',
             'created_by' => 'string',
             'deleted_by' => 'string',
 
->>>>>>> b97b11d (.)
             // 'attachment_type' => AttachmentTypeEnum::class,
             'manipulations' => 'array',
             'custom_properties' => 'array',
@@ -402,11 +348,7 @@ class Media extends SpatieMedia
         ];
     }
 
-<<<<<<< HEAD
-    /**
-=======
    /**
->>>>>>> b97b11d (.)
      * Create a new factory instance for the model.
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory<static>
@@ -415,8 +357,5 @@ class Media extends SpatieMedia
     {
         return app(GetFactoryAction::class)->execute(static::class);
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> b97b11d (.)
 }

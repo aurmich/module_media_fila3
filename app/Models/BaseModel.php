@@ -79,10 +79,7 @@ abstract class BaseModel extends Model
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
             'deleted_at' => 'datetime',
-<<<<<<< HEAD
-=======
 
->>>>>>> b97b11d (.)
             'updated_by' => 'string',
             'created_by' => 'string',
             'deleted_by' => 'string',

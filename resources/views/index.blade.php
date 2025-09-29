@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<?php
-
-declare(strict_types=1);
-
-?>
-=======
->>>>>>> b97b11d (.)
 @extends('media::layouts.master')
 
 @section('content')
